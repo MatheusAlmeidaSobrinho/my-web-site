@@ -1,0 +1,115 @@
+.login-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+
+  .login-title {
+    text-decoration: underline;
+  }
+
+  .login-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    width: 300px;
+
+    .login-input {
+      font-size: 1rem;
+      padding: 0.25rem;
+    }
+
+    .login-button {
+      font-size: 1rem;
+      font-weight: 700;
+      align-self: center;
+      padding: 0.5rem 1rem;
+      border-radius: 0.15rem;
+      width: fit-content;
+      transition: 0.25s all ease-in-out;
+    }
+  }
+
+  &.dark {
+
+    // background-color: red;
+
+    .login-title {
+      text-decoration: underline;
+    }
+
+    .login-form {
+
+      .login-input {
+        border-radius: 0.15rem;
+        color: orangered;
+        background-color: rgb(100, 100, 100);
+      }
+
+      input::placeholder {
+        color: rgb(255, 138, 95);
+      }
+
+      .login-button {
+        color: orangered;
+        background: rgba(255, 255, 255, 0.9);
+
+        &:hover {
+          color: white;
+          background: orangered;
+        }
+      }
+    }
+
+    .login-goToRegister {
+      color: rgb(255, 138, 95);
+
+      a:hover {
+        text-decoration: underline;
+      }
+
+    }
+
+  }
+
+  &.light {
+
+    // background-color: red;
+
+    .login-title {
+      text-decoration: underline;
+    }
+
+    .login-form {
+
+      .login-input {
+        border-radius: 0.15rem;
+        color: purple;
+        background-color: rgb(216, 216, 216);
+      }
+
+      input::placeholder {
+        color: rgb(195, 58, 195);
+      }
+
+      .login-button {
+        color: purple;
+        background: rgba(255, 255, 255, 0.9);
+
+        &:hover {
+          color: white;
+          background: purple;
+        }
+      }
+    }
+
+    .login-goToRegister {
+      color: rgb(195, 58, 195);
+
+      a:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+}

@@ -1,0 +1,91 @@
+.info-container {
+  display: flex;
+  flex-direction: column;
+
+  .info-container-github {
+    display: flex;
+    justify-content: space-evenly;
+
+    .info-github {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      justify-content: space-between;
+      gap: 0.2rem;
+
+      .info-title {
+        //
+      }
+
+      .info-paragraph {
+        display: flex;
+        margin-bottom: 1rem;
+        gap: 1rem;
+      }
+    }
+
+    .info-github2 {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+
+      img {
+        border-radius: 99rem;
+        width: 140px;
+        height: 140px;
+      }
+
+
+      .info-paragraph {
+        display: flex;
+        gap: 1rem;
+      }
+    }
+  }
+
+  .info-repos {
+    display: flex;
+    flex-direction: column;
+
+    .container-repos {
+      margin-top: 1rem;
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 1rem;
+
+      .list-repos {
+        border: red 2px solid;
+        width: 500px;
+
+
+        li {
+          overflow: hidden;
+          white-space: nowrap;
+          text-overflow: ellipsis;
+          margin: 0.25rem;
+        }
+
+        .info-button-back a {
+          color: white;
+          align-self: center;
+        }
+      }
+
+    }
+  }
+
+  .info-contact {
+    margin-top: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    p {}
+
+    a {
+      color: white;
+    }
+  }
+}
