@@ -1,0 +1,86 @@
+.weather-container {
+  font-size: 0.75rem;
+  position: fixed;
+  bottom: 60px;
+  left: 10px;
+
+  button,
+  input {
+    border: none;
+    background: none;
+  }
+
+  .weather-display {
+    input {
+      margin-right: 0.5rem;
+    }
+  }
+
+
+  .weather-search-invalid {}
+
+  .weather-display-working {
+    .weather-display-status-200 {
+      .button200 {
+        font-weight: bold;
+        margin-top: 0.25rem;
+      }
+    }
+  }
+
+
+
+  &.dark {
+
+    button {
+      color: orangered;
+      border-bottom: 2px solid transparent;
+
+      &:hover {
+        border-bottom: 2px solid orangered;
+      }
+    }
+
+    .weather-display,
+    .weather-search-invalid {
+
+      input {
+        border-bottom: 2px solid orangered;
+        color: orangered;
+
+        &::placeholder {
+          color: orange;
+        }
+      }
+
+
+    }
+  }
+
+  &.light {
+
+    button {
+      color: purple;
+      border-bottom: 2px solid transparent;
+
+      &:hover {
+        border-bottom: 2px solid purple;
+      }
+    }
+
+    .weather-display,
+    .weather-search-invalid {
+
+      input {
+        border-bottom: 2px solid purple;
+        color: purple;
+
+        &::placeholder {
+          color: purple;
+        }
+      }
+
+
+    }
+  }
+}

@@ -1,4 +1,4 @@
-import './style.scss'
+import './Home.scss'
 
 import { contents } from '../../assets/translate/contents'
 import { Link, Outlet, useLocation } from 'react-router-dom'
@@ -7,8 +7,10 @@ import { useTheme } from '../../hooks/useTheme'
 import { useLanguage } from '../../hooks/useLanguage'
 import { useAuthContext } from '../../hooks/useAuth'
 import { useLocalStorageContext } from '../../hooks/useLocalStorage'
-import Clock from '../../components/Clock/Clock'
+// import Clock from '../../components/Clock/Clock'
 // import Weather from '../../components/Weather/Weather'
+import logoDark from '../../assets/images/logoDark.svg'
+import logoLight from '../../assets/images/logoLight.svg'
 
 export default function Home() {
   const { theme, changeTheme } = useTheme()
@@ -22,13 +24,19 @@ export default function Home() {
 
   return (
     <div className={`page-home ${theme} ${acessibility} ${currentLanguage}`}>
-      <Clock />
-      {/* <Weather /> */}
+      {/* <Clock />
+      <Weather /> */}
       <div className="header-component">
         <div className="logo-component">
-          <Link to="/">
-            <h1>LOGO</h1>
-          </Link>
+          {theme === 'dark' ? (
+            <Link to="/">
+              <img src={logoDark} alt="" />
+            </Link>
+          ) : (
+            <Link to="/">
+              <img src={logoLight} alt="" />
+            </Link>
+          )}
         </div>
         <div className="configurations-component">
           <div className="configurations-item">
@@ -102,9 +110,6 @@ export default function Home() {
             <Link to="/info">
               {contents.navBar.informations[currentLanguage]}
             </Link>
-            <Link to="/contact">
-              {contents.navBar.contact[currentLanguage]}
-            </Link>
           </div>
         ) : (
           <div className="nav-component">
@@ -114,10 +119,10 @@ export default function Home() {
             <Link to="/info">
               {contents.navBar.informations[currentLanguage]}
             </Link>
-            <Link to="/contact">
-              {contents.navBar.contact[currentLanguage]}
-            </Link>
-            <Link to="/potato">newPage</Link>
+            <Link to="/potato">Ferramentas IA</Link>
+            <Link to="/potato">Games</Link>
+            <Link to="/potato">Animes</Link>
+            <Link to="/potato">Noticias</Link>
           </div>
         )}
 
