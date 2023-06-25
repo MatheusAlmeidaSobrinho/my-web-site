@@ -1,9 +1,9 @@
 .project-page {
   display: flex;
   flex-direction: column;
-  border-radius: 0.15rem;
   padding-bottom: 0.75rem;
   height: fit-content;
+  font-size: 0.75rem;
 
   &.dark {
     background-color: rgb(81, 81, 81);

@@ -52,9 +52,9 @@ export const contents = {
       english: 'Projects',
       portuguese: 'Projetos'
     },
-    informations: {
-      english: 'Informations',
-      portuguese: 'Informações'
+    about: {
+      english: 'About',
+      portuguese: 'Sobre Mim'
     },
     contact: {
       english: 'Contact',

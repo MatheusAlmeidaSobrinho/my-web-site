@@ -7,10 +7,11 @@ import { useTheme } from '../../hooks/useTheme'
 import { useLanguage } from '../../hooks/useLanguage'
 import { useAuthContext } from '../../hooks/useAuth'
 import { useLocalStorageContext } from '../../hooks/useLocalStorage'
-// import Clock from '../../components/Clock/Clock'
-// import Weather from '../../components/Weather/Weather'
+import Clock from '../../components/Clock/Clock'
+import Weather from '../../components/Weather/Weather'
 import logoDark from '../../assets/images/logoDark.svg'
 import logoLight from '../../assets/images/logoLight.svg'
+import { useEffect, useState } from 'react'
 
 export default function Home() {
   const { theme, changeTheme } = useTheme()
@@ -21,11 +22,26 @@ export default function Home() {
   const { getItem } = useLocalStorageContext()
   const user = getItem('user')
   const { isAuthenticated, logout } = useAuthContext()
+  const [isOpen, setIsOpen] = useState(false)
+
+  const [currentPage, setCurrentPage] = useState('')
+
+  useEffect(() => {
+    setCurrentPage(location.pathname)
+  }, [location])
+
+  const toggleDropdown = () => {
+    setIsOpen(!isOpen)
+  }
+
+  const closeDropdown = () => {
+    setIsOpen(false)
+  }
 
   return (
     <div className={`page-home ${theme} ${acessibility} ${currentLanguage}`}>
-      {/* <Clock />
-      <Weather /> */}
+      <Clock />
+      <Weather />
       <div className="header-component">
         <div className="logo-component">
           {theme === 'dark' ? (
@@ -38,6 +54,144 @@ export default function Home() {
             </Link>
           )}
         </div>
+        {!isAuthenticated() ? (
+          <div className="nav-component">
+            <div
+              className="dropdown"
+              onMouseLeave={closeDropdown}
+              onClick={toggleDropdown}
+            >
+              <button className="dropdown-toggle">
+                {currentPage === '/' && 'Home'}
+                {currentPage === '/animes' && 'Animes'}
+                {currentPage === '/blog' && 'Blog'}
+                {currentPage === '/consoles' && 'Consoles'}
+                {currentPage === '/toolsIa' && 'IA Tools'}
+                {currentPage === '/games' && 'Games'}
+                {currentPage === '/potatoApi' && 'Api LP'}
+                {currentPage === '/info' && 'Sobre Mim'}
+                {currentPage === '/projects' &&
+                  contents.navBar.projects[currentLanguage]}
+              </button>
+              {isOpen && (
+                <ul className="dropdown-menu" onMouseLeave={closeDropdown}>
+                  <Link
+                    to="/"
+                    className={location.pathname === '/' ? 'active' : ''}
+                  >
+                    <li>Home</li>
+                  </Link>
+                  <Link
+                    to="/projects"
+                    className={
+                      location.pathname === '/projects' ? 'active' : ''
+                    }
+                  >
+                    <li>{contents.navBar.projects[currentLanguage]}</li>
+                  </Link>
+                  <Link
+                    to="/info"
+                    className={location.pathname === '/info' ? 'active' : ''}
+                  >
+                    <li>{contents.navBar.about[currentLanguage]}</li>
+                  </Link>
+                </ul>
+              )}
+            </div>
+          </div>
+        ) : (
+          <div className="nav-component">
+            <div
+              className="dropdown"
+              onMouseLeave={closeDropdown}
+              onClick={toggleDropdown}
+            >
+              <button className="dropdown-toggle">
+                {currentPage === '/' && 'Home'}
+                {currentPage === '/animes' && 'Animes'}
+                {currentPage === '/blog' && 'Blog'}
+                {currentPage === '/consoles' && 'Consoles'}
+                {currentPage === '/games' && 'Games'}
+                {currentPage === '/toolsIa' && 'Tools IA'}
+                {currentPage === '/potatoApi' && 'Potato API'}
+                {currentPage === '/projects' &&
+                  contents.navBar.projects[currentLanguage]}
+                {currentPage === '/info' && 'Sobre Mim'}
+              </button>
+              {isOpen && (
+                <ul className="dropdown-menu" onMouseLeave={closeDropdown}>
+                  <Link
+                    to="/"
+                    className={location.pathname === '/' ? 'active' : ''}
+                  >
+                    <li>Home</li>
+                  </Link>
+
+                  <Link
+                    to="/animes"
+                    className={location.pathname === '/animes' ? 'active' : ''}
+                  >
+                    <li>Animes</li>
+                  </Link>
+
+                  <Link
+                    to="/blog"
+                    className={location.pathname === '/blog' ? 'active' : ''}
+                  >
+                    <li>Blog</li>
+                  </Link>
+
+                  <Link
+                    to="/consoles"
+                    className={
+                      location.pathname === '/consoles' ? 'active' : ''
+                    }
+                  >
+                    <li>Consoles</li>
+                  </Link>
+
+                  <Link
+                    to="/games"
+                    className={location.pathname === '/games' ? 'active' : ''}
+                  >
+                    <li>Games</li>
+                  </Link>
+
+                  <Link
+                    to="/toolsIa"
+                    className={location.pathname === '/toolsIa' ? 'active' : ''}
+                  >
+                    <li>Tools IA</li>
+                  </Link>
+
+                  <Link
+                    to="/potatoApi"
+                    className={
+                      location.pathname === '/potatoApi' ? 'active' : ''
+                    }
+                  >
+                    <li>Potato API</li>
+                  </Link>
+
+                  <Link
+                    to="/projects"
+                    className={
+                      location.pathname === '/projects' ? 'active' : ''
+                    }
+                  >
+                    <li>{contents.navBar.projects[currentLanguage]}</li>
+                  </Link>
+                  <Link
+                    to="/info"
+                    className={location.pathname === '/info' ? 'active' : ''}
+                  >
+                    <li>{contents.navBar.about[currentLanguage]}</li>
+                  </Link>
+                </ul>
+              )}
+            </div>
+          </div>
+        )}
         <div className="configurations-component">
           <div className="configurations-item">
             <select
@@ -100,72 +254,45 @@ export default function Home() {
           )}
         </div>
       </div>
-
-      <div className="navAndMain">
-        {!isAuthenticated() ? (
-          <div className="nav-component">
-            <Link to="/projects">
-              {contents.navBar.projects[currentLanguage]}
-            </Link>
-            <Link to="/info">
-              {contents.navBar.informations[currentLanguage]}
-            </Link>
+      <div className="main-component">
+        {algumaCondicao ? (
+          <div className="instructions-component">
+            <h3>Por que criei esse site?</h3>
+            <p>
+              What is Lorem Ipsum? Lorem Ipsum is simply dummy text of the
+              printing and typesetting industry. Lorem Ipsum has been the
+              industrys standard dummy text ever since the 1500s, when an
+              unknown printer took a galley of type and scrambled it to make a
+              type specimen book.
+            </p>
+            <h3>Sobre oque é esse site?</h3>
+            <p>
+              What is Lorem Ipsum? Lorem Ipsum is simply dummy text of the
+              printing and typesetting industry. Lorem Ipsum has been the
+              industrys standard dummy text ever since the 1500s, when an
+              unknown printer took a galley of type and scrambled it to make a
+              type specimen book.
+            </p>
+            <h3>Projetos e Funcionalidades</h3>
+            <p>
+              What is Lorem Ipsum? Lorem Ipsum is simply dummy text of the
+              printing and typesetting industry. Lorem Ipsum has been the
+              industrys standard dummy text ever since the 1500s, when an
+              unknown printer took a galley of type and scrambled it to make a
+              type specimen book.
+            </p>
+            <h3>Guia do site</h3>
+            <p>
+              What is Lorem Ipsum? Lorem Ipsum is simply dummy text of the
+              printing and typesetting industry. Lorem Ipsum has been the
+              industrys standard dummy text ever since the 1500s, when an
+              unknown printer took a galley of type and scrambled it to make a
+              type specimen book.
+            </p>
           </div>
         ) : (
-          <div className="nav-component">
-            <Link to="/projects">
-              {contents.navBar.projects[currentLanguage]}
-            </Link>
-            <Link to="/info">
-              {contents.navBar.informations[currentLanguage]}
-            </Link>
-            <Link to="/potato">Ferramentas IA</Link>
-            <Link to="/potato">Games</Link>
-            <Link to="/potato">Animes</Link>
-            <Link to="/potato">Noticias</Link>
-          </div>
+          <Outlet />
         )}
-
-        <div className="main-component">
-          {algumaCondicao ? (
-            <div className="instructions-component">
-              <h3>Por que criei esse site?</h3>
-              <p>
-                What is Lorem Ipsum? Lorem Ipsum is simply dummy text of the
-                printing and typesetting industry. Lorem Ipsum has been the
-                industrys standard dummy text ever since the 1500s, when an
-                unknown printer took a galley of type and scrambled it to make a
-                type specimen book.
-              </p>
-              <h3>Sobre oque é esse site?</h3>
-              <p>
-                What is Lorem Ipsum? Lorem Ipsum is simply dummy text of the
-                printing and typesetting industry. Lorem Ipsum has been the
-                industrys standard dummy text ever since the 1500s, when an
-                unknown printer took a galley of type and scrambled it to make a
-                type specimen book.
-              </p>
-              <h3>Projetos e Funcionalidades</h3>
-              <p>
-                What is Lorem Ipsum? Lorem Ipsum is simply dummy text of the
-                printing and typesetting industry. Lorem Ipsum has been the
-                industrys standard dummy text ever since the 1500s, when an
-                unknown printer took a galley of type and scrambled it to make a
-                type specimen book.
-              </p>
-              <h3>Guia do site</h3>
-              <p>
-                What is Lorem Ipsum? Lorem Ipsum is simply dummy text of the
-                printing and typesetting industry. Lorem Ipsum has been the
-                industrys standard dummy text ever since the 1500s, when an
-                unknown printer took a galley of type and scrambled it to make a
-                type specimen book.
-              </p>
-            </div>
-          ) : (
-            <Outlet />
-          )}
-        </div>
       </div>
     </div>
   )

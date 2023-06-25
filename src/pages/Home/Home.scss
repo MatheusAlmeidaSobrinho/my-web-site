@@ -1,16 +1,15 @@
 .page-home {
   width: 100%;
-  height: 100vh;
   transition: all 0.25s ease-in-out;
 
   .header-component {
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: center;
     align-content: center;
     flex-direction: row;
     flex-wrap: wrap;
-    height: 15vh;
+    height: 12vh;
 
     .logo-component {
 
@@ -69,38 +68,56 @@
 
   }
 
-  .navAndMain {
-    display: grid;
-    grid-template-columns: 15fr 85fr;
-    grid-template-areas: 'nav' 'main';
-    border-top: 2px solid transparent;
+  .nav-component {
+    width: 125px;
+    text-align: center;
+    background: none;
+    position: relative;
 
-    .nav-component {
-      grid-area: 'nav';
-      display: flex;
-      flex-direction: column;
-      flex-wrap: nowrap;
-      gap: 0.5rem;
-      text-align: center;
+    .dropdown {
+      width: 125px;
+      position: relative;
+      display: inline-block;
       border-bottom: 2px solid transparent;
-      height: fit-content;
-    }
+      background: none;
 
-    .main-component {
-      grid-area: 'main';
-      padding: 1%;
-      border-left: 2px solid transparent;
-
-      .instructions-component {
-        display: flex;
-        flex-direction: column;
-
-        p {
-          padding-bottom: 1rem;
-        }
-
+      button {
+        font-weight: 500;
       }
     }
+
+    .dropdown .dropdown-toggle {
+      width: 125px;
+      background: none;
+      border: none;
+      cursor: pointer;
+    }
+
+    .dropdown .dropdown-menu {
+      width: 125px;
+      position: absolute;
+      top: 100%;
+      left: 0;
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+  }
+
+  .main-component {
+
+    border-left: 2px solid transparent;
+
+    .instructions-component {
+      display: flex;
+      flex-direction: column;
+
+      p {
+        padding-bottom: 1rem;
+      }
+
+    }
+
   }
 
   ////////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -165,25 +182,30 @@
 
     }
 
-    .navAndMain {
-      border-top: 2px solid orangered;
+    .nav-component {
 
-      .nav-component {
 
-        border-bottom: 2px solid orangered;
+      .dropdown {
 
-        :hover {
-          color: white;
-          background-color: orangered;
+        button {
+          color: orangered;
         }
 
+        &:hover {
+          border-bottom: 2px solid orangered;
+        }
       }
 
-      .main-component {
-        background-color: rgb(61, 61, 61);
-        border-left: 2px solid orangered;
+      .dropdown .dropdown-menu {
+        background-color: rgb(95, 95, 95);
 
-        .instructions-component {}
+        li {
+          color: orangered;
+
+          &:hover {
+            background-color: rgb(50, 50, 50);
+          }
+        }
       }
     }
   }
@@ -246,25 +268,30 @@
 
     }
 
-    .navAndMain {
-      border-top: 2px solid purple;
+    .nav-component {
 
-      .nav-component {
 
-        border-bottom: 2px solid purple;
+      .dropdown {
 
-        :hover {
-          color: white;
-          background-color: purple;
+        button {
+          color: purple;
         }
 
+        &:hover {
+          border-bottom: 2px solid purple;
+        }
       }
 
-      .main-component {
-        background-color: rgb(237, 237, 237);
-        border-left: 2px solid purple;
+      .dropdown .dropdown-menu {
+        background-color: rgb(206, 206, 206);
 
-        .instructions-component {}
+        li {
+          color: purple;
+
+          &:hover {
+            background-color: rgb(178, 178, 178);
+          }
+        }
       }
     }
   }

@@ -2,6 +2,24 @@ html {
   box-sizing: border-box;
   font-size: 1.15rem;
   color: white;
+  padding: 0 15%;
+  background-color: rgb(61, 61, 61);
+
+  ::-webkit-scrollbar {
+    width: 10px;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background-color: #797979;
+  }
+
+  ::-webkit-scrollbar-track {
+    background-color: #dadada;
+  }
+
+  // &.dark {
+  //   background-color: rgb(61, 61, 61);
+  // }
 }
 
 *,
@@ -11,7 +29,6 @@ html {
 }
 
 body {
-  background-color: rgb(61, 61, 61);
   user-select: none;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;

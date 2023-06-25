@@ -45,7 +45,12 @@ function App() {
                       <Route path="/register" element={<Register />} />
                       <Route path="/accountuser" element={<AccountUser />} />
                       <Route path="/accountadmin" element={<AccountAdmin />} />
-                      <Route path="/potato" element={<Potato />} />
+                      <Route path="/animes" element={<Potato />} />
+                      <Route path="/blog" element={<Potato />} />
+                      <Route path="/consoles" element={<Potato />} />
+                      <Route path="/toolsIa" element={<Potato />} />
+                      <Route path="/games" element={<Potato />} />
+                      <Route path="/potatoApi" element={<Potato />} />
                     </Route>
                   </Routes>
                 </Router>
