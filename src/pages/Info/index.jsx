@@ -49,11 +49,18 @@ export default function Info() {
           <h1 className="info-title">{info.name}</h1>
 
           <p>{info.bio}</p>
-          <p>Linguagens: JavaScript / Html / Css / React</p>
-          <p>Habilidades: Disciplina / Foco / Consistência</p>
+          <p>
+            {contents.info.languagesInfo[currentLanguage]}: JavaScript / Html /
+            Css / React
+          </p>
+          <p>{contents.info.skillInfo[currentLanguage]}</p>
           <div className="info-paragraph">
-            <p>Seguindo: {info.following}</p>
-            <p>Seguido:{info.followers}</p>
+            <p>
+              {contents.info.followingInfo[currentLanguage]}: {info.following}
+            </p>
+            <p>
+              {contents.info.followersInfo[currentLanguage]}:{info.followers}
+            </p>
           </div>
         </div>
         <div className="info-github2">
@@ -75,17 +82,20 @@ export default function Info() {
         </div>
       </div>
       <div className="info-repos">
-        <h1>{contents.project.titleProjectPage[currentLanguage]}</h1>
+        <h1>{contents.info.titlePageInfo[currentLanguage]}</h1>
 
         <div className="container-repos">
           {repository.map(repo => (
             <ul key={repo.html_url} className="list-repos">
               <li>{repo.name}</li>
-              <li className="truncate">{repo.description ?? 'Desconhecido'}</li>
+              <li className="truncate">
+                {repo.description ??
+                  contents.info.readMeUnknownInfo[currentLanguage]}
+              </li>
               <li>{repo.language ?? 'Multiplas Linguagens'}</li>
               <div className="info-button-back">
                 <a href={repo.html_url} target="__blank">
-                  {contents.project.buttonViewProjectPage[currentLanguage]}
+                  {contents.info.buttonViewInfoPage[currentLanguage]}
                 </a>
               </div>
             </ul>

@@ -3,7 +3,7 @@ html {
   font-size: 1.15rem;
   color: white;
   padding: 0 15%;
-  background-color: rgb(61, 61, 61);
+  text-align: justify;
 
   ::-webkit-scrollbar {
     width: 10px;
@@ -83,6 +83,10 @@ select,
 textarea {
   border: none;
   outline: none;
+}
+
+button {
+  cursor: pointer;
 }
 
 ::placeholder {

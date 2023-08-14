@@ -31,4 +31,26 @@
     a {}
 
   }
+
+  .instructions-component {
+    .project-content {
+
+      a {
+        font-weight: 700;
+        font-size: 1.25rem;
+        margin-left: 1rem;
+        border-bottom: 3px solid transparent;
+
+        &:hover {
+          border-bottom: 3px solid orangered;
+        }
+      }
+
+      .lang-func {
+        margin: 0.25rem 0rem 1rem 0rem;
+        display: flex;
+        justify-content: space-evenly;
+      }
+    }
+  }
 }

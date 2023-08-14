@@ -6,13 +6,14 @@ export default function ProjectTwo() {
     <div className="projectTwo-page">
       <div className="projectTwo-header">
         <button>
-          <Link to="/projectOne">Voltar</Link>
+          <Link to="/projects/projectOne">Voltar</Link>
         </button>
         <p>Project 2</p>
         <button>
-          <Link to="/projectThree">Avançar</Link>
+          <Link to="/projects/projectThree">Avançar</Link>
         </button>
       </div>
+      <h1>CALCULADORA</h1>
     </div>
   )
 }

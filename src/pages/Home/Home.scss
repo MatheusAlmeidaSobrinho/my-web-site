@@ -1,6 +1,5 @@
 .page-home {
   width: 100%;
-  transition: all 0.25s ease-in-out;
 
   .header-component {
     display: flex;
@@ -215,7 +214,7 @@
   // LIGHT MODE
   &.light {
     color: purple;
-    background: rgb(237, 237, 237);
+    background: #ededed;
 
     a {
       color: purple;

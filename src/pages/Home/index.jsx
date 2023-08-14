@@ -7,11 +7,13 @@ import { useTheme } from '../../hooks/useTheme'
 import { useLanguage } from '../../hooks/useLanguage'
 import { useAuthContext } from '../../hooks/useAuth'
 import { useLocalStorageContext } from '../../hooks/useLocalStorage'
-import Clock from '../../components/Clock/Clock'
-import Weather from '../../components/Weather/Weather'
+// import Clock from '../../components/Clock/Clock'
+// import Weather from '../../components/Weather/Weather'
+// import CoinCounter from '../../components/CoinCounter/CoinCounter'
 import logoDark from '../../assets/images/logoDark.svg'
 import logoLight from '../../assets/images/logoLight.svg'
 import { useEffect, useState } from 'react'
+import { BiExit, BiLogIn, BiRegistered } from 'react-icons/bi'
 
 export default function Home() {
   const { theme, changeTheme } = useTheme()
@@ -40,8 +42,9 @@ export default function Home() {
 
   return (
     <div className={`page-home ${theme} ${acessibility} ${currentLanguage}`}>
-      <Clock />
+      {/* <Clock />
       <Weather />
+      <CoinCounter /> */}
       <div className="header-component">
         <div className="logo-component">
           {theme === 'dark' ? (
@@ -63,15 +66,15 @@ export default function Home() {
             >
               <button className="dropdown-toggle">
                 {currentPage === '/' && 'Home'}
-                {currentPage === '/animes' && 'Animes'}
-                {currentPage === '/blog' && 'Blog'}
-                {currentPage === '/consoles' && 'Consoles'}
-                {currentPage === '/toolsIa' && 'IA Tools'}
-                {currentPage === '/games' && 'Games'}
-                {currentPage === '/potatoApi' && 'Api LP'}
-                {currentPage === '/info' && 'Sobre Mim'}
+                {currentPage === '/login' && 'Logging...'}
+                {currentPage === '/register' && 'Registering...'}
+                {currentPage === '/info' && 'Sobre'}
                 {currentPage === '/projects' &&
-                  contents.navBar.projects[currentLanguage]}
+                  contents.home.pageProjects[currentLanguage]}
+                {currentPage === '/projects/projectOne' &&
+                  contents.home.pageProjOneProject[currentLanguage]}
+                {currentPage === '/projects/projectTwo' &&
+                  contents.home.pageProjTwoProject[currentLanguage]}
               </button>
               {isOpen && (
                 <ul className="dropdown-menu" onMouseLeave={closeDropdown}>
@@ -87,13 +90,13 @@ export default function Home() {
                       location.pathname === '/projects' ? 'active' : ''
                     }
                   >
-                    <li>{contents.navBar.projects[currentLanguage]}</li>
+                    <li>{contents.home.pageProjects[currentLanguage]}</li>
                   </Link>
                   <Link
                     to="/info"
                     className={location.pathname === '/info' ? 'active' : ''}
                   >
-                    <li>{contents.navBar.about[currentLanguage]}</li>
+                    <li>{contents.home.pageInfo[currentLanguage]}</li>
                   </Link>
                 </ul>
               )}
@@ -109,14 +112,19 @@ export default function Home() {
               <button className="dropdown-toggle">
                 {currentPage === '/' && 'Home'}
                 {currentPage === '/animes' && 'Animes'}
+                {currentPage === '/accountuser' && 'My Space'}
+                {currentPage === '/accountadmin' && 'Adm Space'}
                 {currentPage === '/blog' && 'Blog'}
-                {currentPage === '/consoles' && 'Consoles'}
                 {currentPage === '/games' && 'Games'}
-                {currentPage === '/toolsIa' && 'Tools IA'}
+                {currentPage === '/toolsIa' &&
+                  contents.home.pageTools[currentLanguage]}
                 {currentPage === '/potatoApi' && 'Potato API'}
                 {currentPage === '/projects' &&
-                  contents.navBar.projects[currentLanguage]}
-                {currentPage === '/info' && 'Sobre Mim'}
+                  contents.home.pageProjects[currentLanguage]}
+                {currentPage === '/info' &&
+                  contents.home.pageInfo[currentLanguage]}
+                {currentPage === '/store' &&
+                  contents.home.pageStore[currentLanguage]}
               </button>
               {isOpen && (
                 <ul className="dropdown-menu" onMouseLeave={closeDropdown}>
@@ -142,15 +150,6 @@ export default function Home() {
                   </Link>
 
                   <Link
-                    to="/consoles"
-                    className={
-                      location.pathname === '/consoles' ? 'active' : ''
-                    }
-                  >
-                    <li>Consoles</li>
-                  </Link>
-
-                  <Link
                     to="/games"
                     className={location.pathname === '/games' ? 'active' : ''}
                   >
@@ -161,7 +160,7 @@ export default function Home() {
                     to="/toolsIa"
                     className={location.pathname === '/toolsIa' ? 'active' : ''}
                   >
-                    <li>Tools IA</li>
+                    <li>{contents.home.pageTools[currentLanguage]}</li>
                   </Link>
 
                   <Link
@@ -179,13 +178,20 @@ export default function Home() {
                       location.pathname === '/projects' ? 'active' : ''
                     }
                   >
-                    <li>{contents.navBar.projects[currentLanguage]}</li>
+                    <li>{contents.home.pageProjects[currentLanguage]}</li>
                   </Link>
                   <Link
                     to="/info"
                     className={location.pathname === '/info' ? 'active' : ''}
                   >
-                    <li>{contents.navBar.about[currentLanguage]}</li>
+                    <li>{contents.home.pageInfo[currentLanguage]}</li>
+                  </Link>
+
+                  <Link
+                    to="/store"
+                    className={location.pathname === '/store' ? 'active' : ''}
+                  >
+                    <li>{contents.home.pageStore[currentLanguage]}</li>
                   </Link>
                 </ul>
               )}
@@ -233,23 +239,29 @@ export default function Home() {
                 <p>
                   {user && user.name === 'Matheus' ? (
                     <Link to="/accountadmin" className="login-account">
-                      Olá ADM, <span>{user ? user.name : ''}</span>!
+                      {contents.home.helloHome[currentLanguage]} ADM,{' '}
+                      <span>{user ? user.name : ''}</span>!
                     </Link>
                   ) : (
                     <Link to="/accountuser" className="login-account">
-                      Olá, <span>{user ? user.name : ''}</span>!
+                      {contents.home.helloHome[currentLanguage]},{' '}
+                      <span>{user ? user.name : ''}</span>!
                     </Link>
                   )}
                 </p>
                 <Link className="login-button-logout" onClick={logout}>
-                  Sair
+                  <BiExit size={28} />
                 </Link>
               </div>
             </div>
           ) : (
             <div className="ifLogin">
-              <Link to="/login">Entrar</Link>
-              <Link to="/register">Cadastrar</Link>
+              <Link to="/login">
+                <BiLogIn size={28} />
+              </Link>
+              <Link to="/register">
+                <BiRegistered size={28} />
+              </Link>
             </div>
           )}
         </div>
@@ -257,38 +269,14 @@ export default function Home() {
       <div className="main-component">
         {algumaCondicao ? (
           <div className="instructions-component">
-            <h3>Por que criei esse site?</h3>
-            <p>
-              What is Lorem Ipsum? Lorem Ipsum is simply dummy text of the
-              printing and typesetting industry. Lorem Ipsum has been the
-              industrys standard dummy text ever since the 1500s, when an
-              unknown printer took a galley of type and scrambled it to make a
-              type specimen book.
-            </p>
-            <h3>Sobre oque é esse site?</h3>
-            <p>
-              What is Lorem Ipsum? Lorem Ipsum is simply dummy text of the
-              printing and typesetting industry. Lorem Ipsum has been the
-              industrys standard dummy text ever since the 1500s, when an
-              unknown printer took a galley of type and scrambled it to make a
-              type specimen book.
-            </p>
-            <h3>Projetos e Funcionalidades</h3>
-            <p>
-              What is Lorem Ipsum? Lorem Ipsum is simply dummy text of the
-              printing and typesetting industry. Lorem Ipsum has been the
-              industrys standard dummy text ever since the 1500s, when an
-              unknown printer took a galley of type and scrambled it to make a
-              type specimen book.
-            </p>
-            <h3>Guia do site</h3>
-            <p>
-              What is Lorem Ipsum? Lorem Ipsum is simply dummy text of the
-              printing and typesetting industry. Lorem Ipsum has been the
-              industrys standard dummy text ever since the 1500s, when an
-              unknown printer took a galley of type and scrambled it to make a
-              type specimen book.
-            </p>
+            <h3>{contents.home.WhyHome[currentLanguage]}</h3>
+            <p>{contents.home.pWhyHome[currentLanguage]}</p>
+            <h3>{contents.home.whatHome[currentLanguage]}</h3>
+            <p>{contents.home.pWhatHome[currentLanguage]}</p>
+            <h3>{contents.home.textProjAndFuncHome[currentLanguage]}</h3>
+            <p>{contents.home.pTextProjAndFuncHome[currentLanguage]}</p>
+            <h3>{contents.home.guideHome[currentLanguage]}</h3>
+            <p>{contents.home.pGuideHome[currentLanguage]}</p>
           </div>
         ) : (
           <Outlet />

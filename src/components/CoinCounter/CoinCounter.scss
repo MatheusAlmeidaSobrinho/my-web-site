@@ -1,0 +1,14 @@
+.coin-counter {
+  margin: 0;
+  padding: 0;
+  position: fixed;
+  bottom: 140px;
+  left: 5px;
+  display: flex;
+  align-items: center;
+
+}
+
+.coin-value {
+  font-weight: bold;
+}

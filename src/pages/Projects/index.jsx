@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom'
 import './Projects.scss'
+import { contents } from '../../assets/translate/contents'
 
 import { useAcessibility } from '../../hooks/useAcessibility'
 import { useTheme } from '../../hooks/useTheme'
@@ -14,75 +15,76 @@ export default function Projects() {
     <div className={`project-page ${theme} ${acessibility} ${currentLanguage}`}>
       <div className="project-header">
         <button>
-          <Link to="..">Voltar</Link>
+          <Link to="..">
+            {contents.project.buttonBackProject[currentLanguage]}
+          </Link>
         </button>
-        <h3>Pagina de Projetos</h3>
+        <h3>{contents.project.titlePageProject[currentLanguage]}</h3>
         <button>
-          <Link to="/projectOne">Avançar</Link>
+          <Link to="/projects/projectOne">
+            {contents.project.buttonNextProject[currentLanguage]}
+          </Link>
         </button>
       </div>
       <div className="instructions-component">
-        <h3>Como navegar?</h3>
-        <p>
-          What is Lorem Ipsum? Lorem Ipsum is simply dummy text of the printing
-          and typesetting industry. Lorem Ipsum has been the industrys standard
-          dummy text ever since the 1500s.
-        </p>
+        <h2>{contents.project.howNavProject[currentLanguage]}</h2>
+        <p>{contents.project.pHowNavProject[currentLanguage]}</p>
 
-        <div>
-          <h3>Gerador de Senha</h3>
-          <h3>Linguagens utilizadas</h3>
-          <p>
-            What is Lorem Ipsum? Lorem Ipsum is simply dummy text of the
-            printing and typesetting industry.
-          </p>
-          <h3>Funcionalidade</h3>
-          <p>
-            What is Lorem Ipsum? Lorem Ipsum is simply dummy text of the
-            printing and typesetting industry.
-          </p>
+        <div className="project-content">
+          <Link to="/projects/projectOne">Gerador de Senha</Link>
+          <h2></h2>
+          <div className="lang-func">
+            <div>
+              <h3>Linguagens utilizadas</h3>
+              <p>What is Lorem Ipsum? Lorem Ipsum</p>
+            </div>
+            <div>
+              <h3>Funcionalidade</h3>
+              <p>What is Lorem Ipsum? Lorem Ipsum</p>
+            </div>
+          </div>
         </div>
 
-        <div>
-          <h3>Calculadora</h3>
-          <h3>Linguagens utilizadas</h3>
-          <p>
-            What is Lorem Ipsum? Lorem Ipsum is simply dummy text of the
-            printing and typesetting industry.
-          </p>
-          <h3>Funcionalidade</h3>
-          <p>
-            What is Lorem Ipsum? Lorem Ipsum is simply dummy text of the
-            printing and typesetting industry.
-          </p>
+        <div className="project-content">
+          <Link to="/projects/projectTwo">Calculadora</Link>
+          <div className="lang-func">
+            <div>
+              <h3>Linguagens utilizadas</h3>
+              <p>What is Lorem Ipsum? Lorem Ipsum</p>
+            </div>
+            <div>
+              <h3>Funcionalidade</h3>
+              <p>What is Lorem Ipsum? Lorem Ipsum</p>
+            </div>
+          </div>
         </div>
 
-        <div>
-          <h3>API GitHub</h3>
-          <h3>Linguagens utilizadas</h3>
-          <p>
-            What is Lorem Ipsum? Lorem Ipsum is simply dummy text of the
-            printing and typesetting industry.
-          </p>
-          <h3>Funcionalidade</h3>
-          <p>
-            What is Lorem Ipsum? Lorem Ipsum is simply dummy text of the
-            printing and typesetting industry.
-          </p>
+        <div className="project-content">
+          <Link to="/projects/projectThree">API GitHub</Link>
+          <div className="lang-func">
+            <div>
+              <h3>Linguagens utilizadas</h3>
+              <p>What is Lorem Ipsum? Lorem Ipsum</p>
+            </div>
+            <div>
+              <h3>Funcionalidade</h3>
+              <p>What is Lorem Ipsum? Lorem Ipsum</p>
+            </div>
+          </div>
         </div>
 
-        <div>
-          <h3>TravelGreen PI</h3>
-          <h3>Linguagens utilizadas</h3>
-          <p>
-            What is Lorem Ipsum? Lorem Ipsum is simply dummy text of the
-            printing and typesetting industry.
-          </p>
-          <h3>Funcionalidade</h3>
-          <p>
-            What is Lorem Ipsum? Lorem Ipsum is simply dummy text of the
-            printing and typesetting industry.
-          </p>
+        <div className="project-content">
+          <Link to="/projects/projectFour">Travel Green</Link>
+          <div className="lang-func">
+            <div>
+              <h3>Linguagens utilizadas</h3>
+              <p>What is Lorem Ipsum? Lorem Ipsum</p>
+            </div>
+            <div>
+              <h3>Funcionalidade</h3>
+              <p>What is Lorem Ipsum? Lorem Ipsum</p>
+            </div>
+          </div>
         </div>
       </div>
     </div>

@@ -102,7 +102,7 @@ export default function ProjectOne() {
         </button>
         <h3 className="title">Gerador de senha</h3>
         <button>
-          <Link to="/projectTwo">Avançar</Link>
+          <Link to="/projects/projectTwo">Avançar</Link>
         </button>
       </div>
       <main>

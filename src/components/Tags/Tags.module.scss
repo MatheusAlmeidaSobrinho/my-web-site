@@ -1,0 +1,25 @@
+.tags {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 1rem auto;
+  font-size: 0.85rem;
+
+  &__lista {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    gap: 1rem;
+    justify-content: space-between;
+
+    li {
+      cursor: pointer;
+      border-bottom: 3px solid transparent;
+    }
+
+    li:hover {
+      border-bottom: 3px solid orangered;
+    }
+  }
+}
