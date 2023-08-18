@@ -7,9 +7,11 @@ import { useTheme } from '../../hooks/useTheme'
 import { useLanguage } from '../../hooks/useLanguage'
 import { useAuthContext } from '../../hooks/useAuth'
 import { useLocalStorageContext } from '../../hooks/useLocalStorage'
-// import Clock from '../../components/Clock/Clock'
-// import Weather from '../../components/Weather/Weather'
-// import CoinCounter from '../../components/CoinCounter/CoinCounter'
+import Clock from '../../components/Clock/Clock'
+import Weather from '../../components/Weather/Weather'
+import CoinCounter from '../../components/CoinCounter/CoinCounter'
+import Player from '../../components/Player/Player'
+import Footer from '../../components/Footer/Footer'
 import logoDark from '../../assets/images/logoDark.svg'
 import logoLight from '../../assets/images/logoLight.svg'
 import { useEffect, useState } from 'react'
@@ -42,9 +44,11 @@ export default function Home() {
 
   return (
     <div className={`page-home ${theme} ${acessibility} ${currentLanguage}`}>
-      {/* <Clock />
+      <Clock />
       <Weather />
-      <CoinCounter /> */}
+      <CoinCounter />
+      <Player />
+      <Footer />
       <div className="header-component">
         <div className="logo-component">
           {theme === 'dark' ? (
@@ -273,10 +277,48 @@ export default function Home() {
             <p>{contents.home.pWhyHome[currentLanguage]}</p>
             <h3>{contents.home.whatHome[currentLanguage]}</h3>
             <p>{contents.home.pWhatHome[currentLanguage]}</p>
-            <h3>{contents.home.textProjAndFuncHome[currentLanguage]}</h3>
-            <p>{contents.home.pTextProjAndFuncHome[currentLanguage]}</p>
             <h3>{contents.home.guideHome[currentLanguage]}</h3>
             <p>{contents.home.pGuideHome[currentLanguage]}</p>
+            <p>
+              <Link to="/animes">Animes</Link>
+              {contents.home.pAnimeGuideHome[currentLanguage]}
+            </p>
+            <p>
+              <Link to="/blog">Blog</Link>
+              {contents.home.pBlogGuideHome[currentLanguage]}
+            </p>
+            <p>
+              <Link to="/games">
+                {contents.home.tGamesGuideHome[currentLanguage]}
+              </Link>
+              {contents.home.pGamesGuideHome[currentLanguage]}
+            </p>
+            <p>
+              <Link to="/toolsIa">
+                {contents.home.tSiteIaGuideHome[currentLanguage]}
+              </Link>
+              {contents.home.pSiteIaGuideHome[currentLanguage]}
+            </p>
+            <p>
+              <Link to="/potatoApi">Potato API</Link>
+              {contents.home.pPotatoApiGuideHome[currentLanguage]}
+            </p>
+            <p>
+              <Link to="/projects">
+                {contents.home.tProjectsGuideHome[currentLanguage]}
+              </Link>
+              {contents.home.pProjectsGuideHome[currentLanguage]}
+            </p>
+            <p>
+              <Link to="/info">{contents.home.pageInfo[currentLanguage]}</Link>
+              {contents.home.pAboutGuideHome[currentLanguage]}
+            </p>
+            <p>
+              <Link to="/store">
+                {contents.home.pageStore[currentLanguage]}
+              </Link>
+              {contents.home.pStoreGuideHome[currentLanguage]}
+            </p>
           </div>
         ) : (
           <Outlet />

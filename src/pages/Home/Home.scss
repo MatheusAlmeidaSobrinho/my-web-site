@@ -112,7 +112,15 @@
       flex-direction: column;
 
       p {
-        padding-bottom: 1rem;
+        padding-bottom: 0.75rem;
+
+        a {
+          font-weight: 700;
+
+          &:hover {
+            color: rgb(252, 160, 127);
+          }
+        }
       }
 
     }
@@ -125,6 +133,20 @@
   &.dark {
     color: orangered;
     background: rgb(61, 61, 61);
+
+    @keyframes gradientAnimation {
+      0% {
+        background-position: 0% 50%;
+      }
+
+      50% {
+        background-position: 100% 50%;
+      }
+
+      100% {
+        background-position: 0% 50%;
+      }
+    }
 
     a {
       color: orangered;
@@ -206,6 +228,20 @@
           }
         }
       }
+    }
+
+    .main-component {
+      .instructions-component {
+        p {
+          a {
+            &:hover {
+              color: rgb(252, 160, 127);
+            }
+          }
+        }
+
+      }
+
     }
   }
 
@@ -292,6 +328,20 @@
           }
         }
       }
+    }
+
+    .main-component {
+      .instructions-component {
+        p {
+          a {
+            &:hover {
+              color: rgb(249, 165, 249);
+            }
+          }
+        }
+
+      }
+
     }
   }
 

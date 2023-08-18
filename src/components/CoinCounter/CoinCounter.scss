@@ -1,5 +1,5 @@
 .coin-counter {
-  margin: 0;
+  margin: 0.75rem 0;
   padding: 0;
   position: fixed;
   bottom: 140px;
@@ -10,5 +10,8 @@
 }
 
 .coin-value {
-  font-weight: bold;
+
+  img {
+    width: 30px;
+  }
 }
