@@ -11,6 +11,7 @@ export default function Footer() {
 
   return (
     <div className={`footer ${theme}`}>
+      <p className="potato">Fala ae</p>
       <div className="icons">
         {theme === 'dark' ? (
           <>
@@ -44,7 +45,6 @@ export default function Footer() {
           </>
         )}
       </div>
-      <p className="potato"></p>
     </div>
   )
 }

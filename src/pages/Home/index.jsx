@@ -16,6 +16,7 @@ import logoDark from '../../assets/images/logoDark.svg'
 import logoLight from '../../assets/images/logoLight.svg'
 import { useEffect, useState } from 'react'
 import { BiExit, BiLogIn, BiRegistered } from 'react-icons/bi'
+import GptApi from '../../components/GptApi/GptApi'
 
 export default function Home() {
   const { theme, changeTheme } = useTheme()
@@ -44,6 +45,7 @@ export default function Home() {
 
   return (
     <div className={`page-home ${theme} ${acessibility} ${currentLanguage}`}>
+      <GptApi />
       <Clock />
       <Weather />
       <CoinCounter />

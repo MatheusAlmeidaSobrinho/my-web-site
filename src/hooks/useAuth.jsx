@@ -19,7 +19,7 @@ const useAuth = () => {
   const login = (email, password) => {
     const user = getItem('user')
     if (user && user.email === email && user.password === password) {
-      setItem('token', 'seu_token_aqui')
+      setItem('token', 'THEPOWEROFPOTATO')
       setAuthenticated(true)
       return true
     }
