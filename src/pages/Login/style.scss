@@ -1,3 +1,5 @@
+@import "../../styles/globalStyles.scss";
+
 .login-container {
   display: flex;
   flex-direction: column;
@@ -43,7 +45,7 @@
 
       .login-input {
         border-radius: 0.15rem;
-        color: orangered;
+        color: $darkColor;
         background-color: rgb(100, 100, 100);
       }
 
@@ -52,12 +54,12 @@
       }
 
       .login-button {
-        color: orangered;
+        color: $darkColor;
         background: rgba(255, 255, 255, 0.9);
 
         &:hover {
           color: white;
-          background: orangered;
+          background: $darkColor;
         }
       }
     }
@@ -85,7 +87,7 @@
 
       .login-input {
         border-radius: 0.15rem;
-        color: purple;
+        color: $lightColor;
         background-color: rgb(216, 216, 216);
       }
 
@@ -94,12 +96,12 @@
       }
 
       .login-button {
-        color: purple;
+        color: $lightColor;
         background: rgba(255, 255, 255, 0.9);
 
         &:hover {
           color: white;
-          background: purple;
+          background: $lightColor;
         }
       }
     }

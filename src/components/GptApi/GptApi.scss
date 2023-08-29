@@ -1,3 +1,5 @@
+@import "../../styles/globalStyles.scss";
+
 .component-chatGpt {
   padding: 1%;
   display: flex;
@@ -11,9 +13,10 @@
   transition: all 0.33s ease-in-out;
   border-radius: 0.5rem;
 
+
+
   &:hover {
     width: 25vw;
-    background: rgb(48, 48, 48);
   }
 
   .container-text {
@@ -23,19 +26,14 @@
     justify-content: center;
     gap: 0.5rem;
 
+
     textarea {
       padding: 0.5rem;
       width: 100%;
       height: 45vh;
-      background: none;
-      border: 1px solid orangered;
       font-size: 1.75rem;
-      color: orangered;
       border-radius: 0.5rem;
-
-      &::placeholder {
-        color: orangered;
-      }
+      animation: $animation;
     }
 
     input {
@@ -43,14 +41,10 @@
       text-align: center;
       margin-bottom: 0.5rem;
       background: none;
-      border: 1px solid orangered;
-      color: orangered;
       font-size: 1.25rem;
       border-radius: 0.5rem;
+      animation: $animation;
 
-      &::placeholder {
-        color: orangered;
-      }
     }
   }
 
@@ -61,16 +55,117 @@
     gap: 0.5rem;
 
     button {
-      color: orangered;
       background: none;
       border-radius: 0.5rem;
       padding: 0.25rem;
       border: 1px solid transparent;
       transition: all 0.25s ease-in-out;
+      animation: $animation;
+    }
+  }
 
-      &:hover {
-        color: rgb(251, 137, 96);
-        border: 1px solid orangered;
+
+
+  &.dark {
+    &:hover {
+      background: rgb(48, 48, 48);
+
+    }
+
+    .container-text {
+      textarea {
+        // border: 1px solid $darkColor;
+        color: $darkColor;
+
+
+        &::placeholder {
+          color: $darkColor;
+        }
+      }
+
+      input {
+        // border: 1px solid $darkColor;
+        color: $darkColor;
+
+        &::placeholder {
+          color: $darkColor;
+        }
+      }
+    }
+
+    .btn-container {
+      button {
+        color: $darkColor;
+
+        &:hover {
+          color: rgb(251, 137, 96);
+          border: 1px solid $darkColor;
+        }
+      }
+    }
+  }
+
+  &.light {
+    &:hover {
+      background: rgb(220, 220, 220);
+    }
+
+    .container-text {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      gap: 0.5rem;
+
+      textarea {
+        padding: 0.5rem;
+        width: 100%;
+        height: 45vh;
+        background: none;
+        // border: 1px solid $lightColor;
+        font-size: 1.75rem;
+        color: $lightColor;
+        border-radius: 0.5rem;
+
+        &::placeholder {
+          color: $lightColor;
+        }
+      }
+
+      input {
+        height: 40px;
+        text-align: center;
+        margin-bottom: 0.5rem;
+        background: none;
+        // border: 1px solid $lightColor;
+        color: $lightColor;
+        font-size: 1.25rem;
+        border-radius: 0.5rem;
+
+        &::placeholder {
+          color: $lightColor;
+        }
+      }
+    }
+
+    .btn-container {
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      gap: 0.5rem;
+
+      button {
+        color: $lightColor;
+        background: none;
+        border-radius: 0.5rem;
+        padding: 0.25rem;
+        border: 1px solid transparent;
+        transition: all 0.25s ease-in-out;
+
+        &:hover {
+          color: rgb(255, 106, 255);
+          // border: 1px solid $lightColor;
+        }
       }
     }
   }

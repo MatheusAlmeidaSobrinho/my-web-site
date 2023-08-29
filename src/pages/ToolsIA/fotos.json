@@ -1,142 +1,204 @@
 [
   {
-    "title": "Name IA Title",
-    "function": "Alura Space",
-    "imagem": "https://picsum.photos/200",
     "id": "1",
+    "title": "Amazon Bedrock",
+    "function": "Amazon Bedrock makes foundation models from Amazon and leading AI startups available through an API, so you can choose from various FMs to find the model that's best suited for your use",
+    "imagem": "https://gpte.ai/content/images/size/w1000/2023/webp/220.webp",
+    "link": "https://aws.amazon.com/pt/bedrock/",
     "tag": "Código"
   },
   {
-    "title": "Name IA Title",
-    "function": "Alura Space",
-    "imagem": "https://picsum.photos/200",
     "id": "2",
+    "title": "Cerebrium",
+    "function": "Cerebrium is a platform that allows you to fine-tune and deploy machine learning models to Serverless CPUs/GPUs with 1 second cold-start times.",
+    "imagem": "https://gpte.ai/content/images/size/w1000/2023/08/screely-1692035913808.webp",
+    "link": "https://www.cerebrium.ai/",
     "tag": "Código"
   },
   {
-    "title": "Name IA Title",
-    "function": "Alura Space",
-    "imagem": "https://picsum.photos/200",
     "id": "3",
+    "title": "CodiumAI",
+    "function": "CodiumAI is redefining and automating Code Integrity with a dev tool that generates meaningful test suites interactively within your IDE.",
+    "imagem": "https://gpte.ai/content/images/size/w1000/2023/webp/737.webp",
+    "link": "https://www.codium.ai/",
     "tag": "Código"
   },
   {
-    "title": "Video Title",
-    "function": "Alura Space",
-    "imagem": "https://picsum.photos/200",
     "id": "4",
-    "tag": "Video"
+    "title": "10Web",
+    "function": "10Web is an AI-powered WordPress platform for automated website building, hosting, and page speed boosting.",
+    "imagem": "https://gpte.ai/content/images/size/w1000/2023/webp/2.webp",
+    "link":"https://10web.io/",
+    "tag": "Código"
   },
   {
-    "title": "Video Title",
-    "function": "Alura Space",
-    "imagem": "https://picsum.photos/200",
     "id": "5",
-    "tag": "Video"
+    "title": "60sec.site",
+    "function": "60sec.site helps developers create custom landing pages for apps in just 60 seconds, no coding skills required.",
+    "imagem": "https://gpte.ai/content/images/size/w1000/2023/webp/7.webp",
+    "link":"https://60sec.site",
+    "tag": "Código"
   },
   {
-    "title": "Video Title",
-    "function": "Alura Space",
-    "imagem": "https://picsum.photos/200",
     "id": "6",
+    "title": "Fliki",
+    "function": "Fliki creates videos from scripts using lifelike voices in under 2 minutes. Transform articles into videos with Text-to-Speech and a rich stock media library.",
+    "imagem": "https://gpte.ai/content/images/size/w1000/2023/webp/1183.webp",
+    "link":"https://fliki.ai/",
     "tag": "Video"
   },
   {
-    "title": "Escrita Title",
-    "function": "Alura Space",
-    "imagem": "https://picsum.photos/200",
     "id": "7",
-    "tag": "Escrita"
+    "title": "Synthesia",
+    "function": "Synthesia generates lifelike AI videos based on text scripts. It allows for the creation of professional-looking videos without the need for filming or actors.",
+    "imagem": "https://gpte.ai/content/images/size/w1000/2023/webp/3007.webp",
+    "link":"https://www.synthesia.io/",
+    "tag": "Video"
   },
   {
-    "title": "Escrita Title",
-    "function": "Alura Space",
-    "imagem": "https://picsum.photos/200",
     "id": "8",
-    "tag": "Escrita"
+    "title": "Munch",
+    "function": "Munch turns long-form videos into short, viral clips.",
+    "imagem": "https://gpte.ai/content/images/size/w1000/2023/webp/2029.webp",
+    "link":"https://www.getmunch.com/",
+    "tag": "Video"
   },
   {
-    "title": "Escrita Title",
-    "function": "Alura Space",
-    "imagem": "https://picsum.photos/200",
     "id": "9",
-    "tag": "Escrita"
+    "title": "Pictory",
+    "function": "Pictory automatically creates short, highly sharable branded videos from long-form content, enhancing your video marketing efforts.",
+    "imagem": "https://gpte.ai/content/images/size/w1000/2023/webp/2309.webp",
+    "link":"https://pictory.ai/",
+    "tag": "Video"
   },
   {
-    "title": "Imagem Title",
-    "function": "Alura Space",
-    "imagem": "https://picsum.photos/200",
     "id": "10",
-    "tag": "Imagem"
+    "title": "Windsor",
+    "function": "Windsor sends millions of personalized videos to customers, ensuring they never forget your brand and building strong brand loyalty.",
+    "imagem": "https://gpte.ai/content/images/size/w1000/2023/webp/3407.webp",
+    "link":"https://www.windsor.io/",
+    "tag": "Video"
   },
   {
-    "title": "Imagem Title",
-    "function": "Alura Space",
-    "imagem": "https://picsum.photos/200",
     "id": "11",
-    "tag": "Imagem"
-  },
-  {
-    "title": "Imagem Title",
-    "function": "Alura Space",
-    "imagem": "https://picsum.photos/200",
-    "id": "12",
-    "tag": "Imagem"
-  },
-  {
-    "title": "Audio Title",
-    "function": "Alura Space",
-    "imagem": "https://picsum.photos/200",
-    "id": "13",
-    "tag": "Audio"
-  },
-  {
-    "title": "Audio Title",
-    "function": "Alura Space",
-    "imagem": "https://picsum.photos/200",
-    "id": "14",
-    "tag": "Audio"
-  },
-  {
-    "title": "Audio Title",
-    "function": "Alura Space",
-    "imagem": "https://picsum.photos/200",
-    "id": "16",
-    "tag": "Audio"
-  },
-  {
-    "title": "Audio Title",
-    "function": "Alura Space",
-    "imagem": "https://picsum.photos/200",
-    "id": "17",
-    "tag": "Audio"
-  },
-  {
-    "title": "Audio Title",
-    "function": "Alura Space",
-    "imagem": "https://picsum.photos/200",
-    "id": "18",
-    "tag": "Imagem"
-  },
-  {
-    "title": "Audio Title",
-    "function": "Alura Space",
-    "imagem": "https://picsum.photos/200",
-    "id": "19",
+    "title": "Jasper",
+    "function": "Jasper is an AI-powered copywriting tool that helps create content faster. It's designed to supercharge your content creation process.",
+    "imagem": "https://gpte.ai/content/images/size/w1000/2023/webp/1606.webp",
+    "link":"https://www.jasper.ai/",
     "tag": "Escrita"
   },
   {
-    "title": "Audio Title",
-    "function": "Alura Space",
-    "imagem": "https://picsum.photos/200",
-    "id": "20",
-    "tag": "Código"
+    "id": "12",
+    "title": "Copymatic",
+    "function": "Copymatic uses AI to generate content, copy, and images, automatically writing unique, engaging, and high-quality copy or content to boost your traffic and save hours of work.",
+    "imagem": "https://gpte.ai/content/images/size/w1000/2023/webp/811.webp",
+    "link":"https://copymatic.ai/",
+    "tag": "Escrita"
   },
   {
-    "title": "Audio Title",
-    "function": "Alura Space",
-    "imagem": "https://picsum.photos/200",
+    "id": "13",
+    "title": "Scalenut",
+    "function": "Scalenut is a writing tool that lets you generate SEO optimized content on the go. It's a power-up every marketer needs to produce content quickly and easily to reach business goals.",
+    "imagem": "https://gpte.ai/content/images/size/w1000/2023/webp/2686.webp",
+    "link":"https://www.scalenut.com/",
+    "tag": "Escrita"
+  },
+  {
+    "id": "14",
+    "title": "Copy AI",
+    "function": "Copy AI is an AI-powered copywriter for marketing, crafting engaging content to enhance your brand's online presence.",
+    "imagem": "https://gpte.ai/content/images/size/w1000/2023/webp/806.webp",
+    "link":"https://www.copy.ai/",
+    "tag": "Escrita"
+  },
+  {
+    "id": "15",
+    "title": "Writesonic",
+    "function": "Writesonic is an AI writer that creates SEO-friendly content for blogs, Facebook ads, Google ads, and Shopify for free. It also includes a paraphrasing tool that lets you rephrase entire articles instantly.",
+    "imagem": "https://gpte.ai/content/images/size/w1000/2023/08/screely-1691264571333.webp",
+    "link":"https://writesonic.com/",
+    "tag": "Escrita"
+  },
+  {
+    "id": "16",
+    "title": "Looka",
+    "function": "Looka is an AI-powered platform that helps you design a logo and build a brand you love.",
+    "imagem": "https://gpte.ai/content/images/size/w1000/2023/07/1--1-.png",
+    "link":"https://looka.com/",
+    "tag": "Design"
+  },
+  {
+    "id": "17",
+    "title": "Adcreative.AI",
+    "function": "Adcreative.ai generates conversion-focused ad and social media post creatives in seconds. Get better results while saving time.",
+    "imagem": "https://gpte.ai/content/images/size/w1000/2023/webp/23.webp",
+    "link":"https://www.adcreative.ai/",
+    "tag": "Design"
+  },
+  {
+    "id": "18",
+    "title": "Uizard",
+    "function": "Uizard is an AI-powered design tool that lets you create stunning web and mobile apps in minutes, even without any design experience.",
+    "imagem": "https://gpte.ai/content/images/size/w1000/2023/webp/3225.webp",
+    "link":"https://uizard.io/",
+    "tag": "Design"
+  },
+  {
+    "id": "19",
+    "title": "LogoAI",
+    "function": "LogoAI is an AI engine that creates unique logo designs and branding templates based on design best practices for business cards, posters, flyers, and social media.",
+    "imagem": "https://gpte.ai/content/images/size/w1000/2023/webp/1811.webp",
+    "link":"https://www.logoai.com/",
+    "tag": "Design"
+  },
+  {
+    "id": "20",
+    "title": "Patterned AI",
+    "function": "Patterned AI creates customized designs using AI-generated seamless patterns and stock images, making every design uniquely yours.",
+    "imagem": "https://gpte.ai/content/images/size/w1000/2023/webp/2249.webp",
+    "link":"https://www.patterned.ai/",
+    "tag": "Design"
+  },
+  {
     "id": "21",
-    "tag": "Código"
+    "title": "Aragon",
+    "function": "Aragon creates HD professional headshots that look exactly like you and increase your chances of getting hired. Look your best with AI-generated photos.",
+    "imagem": "https://gpte.ai/content/images/size/w1000/2023/webp/257.webp",
+    "link":"https://aragon.ai/",
+    "tag": "Imagem"
+  },
+  {
+    "id": "22",
+    "title": "Headshot Pro",
+    "function": "Headshot Pro provides professional corporate headshots for your team, using AI to optimize lighting, focus, and color.",
+    "imagem": "https://gpte.ai/content/images/size/w1000/2023/webp/1425.webp",
+    "link":"https://www.headshotpro.com/",
+    "tag": "Imagem"
+  },
+  {
+    "id": "23",
+    "title": "Profile AI",
+    "function": "Profile Picture AI utilizes artificial intelligence to generate a pfps of you that looks perfect and captures who you are. You can be anything or anyone!",
+    "imagem": "https://gpte.ai/content/images/size/w1000/2023/08/screely-1691264064911.webp",
+    "link":"https://www.profilepicture.ai/",
+    "tag": "Imagem"
+  },
+  {
+    "id": "24",
+    "title": "Renew",
+    "function": "Renew lets you use community-created image generating-apps, or create your own in a few-clicks.",
+    "imagem": "https://gpte.ai/content/images/size/w1000/2023/08/screely-1691156354289.webp",
+    "link":"https://renewit.ai/",
+    "tag": "Imagem"
+  },
+  {
+    "id": "25",
+    "title": "88stacks",
+    "function": "88stacks creates eye-catching images that fit your brand's image and messaging.",
+    "imagem": "https://gpte.ai/content/images/size/w1000/2023/webp/8.webp",
+    "link":"https://www.88stacks.com/",
+    "tag": "Imagem"
   }
+
+  
 ]

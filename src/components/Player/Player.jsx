@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useState, useEffect, useRef } from 'react'
 import './Player.scss'
 import { useTheme } from '../../hooks/useTheme'
 import musicOne from '../../assets/musics/backgroundMusic.mp3'
@@ -15,26 +15,39 @@ function Player() {
 
   const musicList = [audioOneSrc, audioTwoSrc, audioThreeSrc]
 
-  const audioSrc = musicList[currentTrackIndex]
+  const audioRef = useRef(null)
 
-  const playNextTrack = () => {
-    const nextTrackIndex = (currentTrackIndex + 1) % musicList.length
-    setCurrentTrackIndex(nextTrackIndex)
-  }
+  useEffect(() => {
+    const audioElement = audioRef.current
+
+    const playNextTrack = () => {
+      const nextTrackIndex = (currentTrackIndex + 1) % musicList.length
+      setCurrentTrackIndex(nextTrackIndex)
+      audioElement.src = musicList[nextTrackIndex]
+      audioElement.load()
+      audioElement.play()
+    }
+
+    audioElement.addEventListener('ended', playNextTrack)
+
+    return () => {
+      audioElement.removeEventListener('ended', playNextTrack)
+    }
+  }, [currentTrackIndex, musicList])
 
   const handleNextButtonClick = () => {
-    playNextTrack()
-    const audioElement = document.getElementById('audio-element')
-    if (audioElement) {
-      audioElement.load() // Reiniciar o elemento de áudio
-      audioElement.play() // Iniciar a próxima música
-    }
+    const nextTrackIndex = (currentTrackIndex + 1) % musicList.length
+    setCurrentTrackIndex(nextTrackIndex)
+    const audioElement = audioRef.current
+    audioElement.src = musicList[nextTrackIndex]
+    audioElement.load()
+    audioElement.play()
   }
 
   return (
     <div className={`player ${theme}`}>
-      <audio id="audio-element" controls onEnded={playNextTrack}>
-        <source src={audioSrc} type="audio/mpeg" />
+      <audio className="audio-element" ref={audioRef} controls>
+        <source src={musicList[currentTrackIndex]} type="audio/mpeg" />
         Seu navegador não suporta a reprodução de áudio.
       </audio>
       <button onClick={handleNextButtonClick}>Próxima Música</button>

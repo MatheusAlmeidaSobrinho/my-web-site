@@ -80,7 +80,7 @@ export default function Weather() {
           <input
             type="text"
             onChange={handleInputChange}
-            placeholder="Digite o nome da cidade"
+            placeholder="Nome da cidade"
           />
           <button onClick={handleSubmit}>Enviar</button>
         </div>
@@ -92,7 +92,7 @@ export default function Weather() {
               <input
                 type="text"
                 onChange={handleInputChange}
-                placeholder="Digite o nome da cidade"
+                placeholder="Nome da cidade"
               />
               <button onClick={handleSubmit}>Enviar</button>
             </div>

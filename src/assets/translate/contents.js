@@ -187,5 +187,17 @@ export const contents = {
       english: 'Back',
       portuguese: 'Voltar'
     }
+  },
+  tools: {
+    previewInfo: {
+      english:
+        'The best artificial intelligence separated by utility, see which one best fits your needs, for more check the website',
+      portuguese:
+        'As melhores inteligências artificiais separadas por utilidade, veja qual melhor se encaixa para a sua necessidade, para mais consulte o site'
+    },
+    previewTag: {
+      english: 'Filter by function:',
+      portuguese: 'Filtre por função: '
+    }
   }
 }

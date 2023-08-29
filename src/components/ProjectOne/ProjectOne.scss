@@ -1,3 +1,5 @@
+@import "../../styles/globalStyles.scss";
+
 .projectOne-page {
   display: flex;
   flex-direction: column;
@@ -296,12 +298,12 @@
 
 
         a {
-          color: orangered;
+          color: $darkColor;
           border-bottom: 2px solid transparent;
         }
 
         a:hover {
-          border-bottom: 2px solid orangered;
+          border-bottom: 2px solid $darkColor;
         }
 
       }
@@ -310,7 +312,7 @@
 
   // LIGHT MODE
   &.light {
-    color: purple;
+    color: $lightColor;
 
     background-color: rgb(222, 222, 222);
 
@@ -329,12 +331,12 @@
 
 
         a {
-          color: purple;
+          color: $lightColor;
           border-bottom: 2px solid transparent;
         }
 
         a:hover {
-          border-bottom: 2px solid purple;
+          border-bottom: $lightColor;
         }
 
       }

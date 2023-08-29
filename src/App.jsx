@@ -13,8 +13,10 @@ import Projects from './pages/Projects'
 import AccountUser from './pages/AccountUser'
 import AccountAdmin from './pages/AccountAdmin'
 import Register from './pages/Register'
-import Potato from './pages/Potato'
-import Anime from './pages/Animes/Anime'
+import Games from './pages/Games'
+import Blog from './pages/Blog'
+import PotatoApi from './pages/PotatoApi'
+import Anime from './pages/Animes'
 import ToolsIA from './pages/ToolsIA'
 import Store from './pages/Store/Store'
 
@@ -25,8 +27,10 @@ const App = () => {
   const { theme } = useTheme()
 
   useLayoutEffect(() => {
-    document.documentElement.style.backgroundColor =
-      theme === 'dark' ? '#3d3d3d' : '#ededed'
+    document.documentElement.style.backgroundImage =
+      theme === 'dark'
+        ? 'linear-gradient(120deg, #185a47, #25185a , #4d185a)'
+        : 'linear-gradient(120deg, #70e3c2, #a693f0, #7eebbf)'
   }, [theme])
 
   return (
@@ -43,10 +47,10 @@ const App = () => {
           <Route path="accountuser" element={<AccountUser />} />
           <Route path="accountadmin" element={<AccountAdmin />} />
           <Route path="animes" element={<Anime />} />
-          <Route path="blog" element={<Potato />} />
+          <Route path="blog" element={<Blog />} />
           <Route path="toolsIa" element={<ToolsIA />} />
-          <Route path="games" element={<Potato />} />
-          <Route path="potatoApi" element={<Potato />} />
+          <Route path="games" element={<Games />} />
+          <Route path="potatoApi" element={<PotatoApi />} />
         </Route>
       </Routes>
     </Router>

@@ -16,10 +16,6 @@ html {
   ::-webkit-scrollbar-track {
     background-color: #dadada;
   }
-
-  // &.dark {
-  //   background-color: rgb(61, 61, 61);
-  // }
 }
 
 *,
@@ -51,9 +47,7 @@ button,
 select,
 option,
 textarea {
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
+  font-family: 'Tektur', cursive;
   margin: 0;
   padding: 0;
   border: 0;
@@ -73,16 +67,13 @@ img {
   height: auto;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
-}
 
 input,
 select,
 textarea {
   border: none;
   outline: none;
+  background: none;
 }
 
 button {
@@ -91,4 +82,60 @@ button {
 
 ::placeholder {
   color: rgba(0, 0, 0, 0.2);
+  background: none;
+}
+
+$backgroundDark: none;
+$darkColor: orangered;
+$lightColor: purple;
+
+$animation: neonAnimation 5s ease-in-out infinite;
+
+@keyframes neonAnimation {
+
+  0% {
+    box-shadow: 0 0 1px rgb(160, 21, 21), 0 0 2px rgb(255, 4, 4), 0 2px 4px rgb(254, 108, 108);
+  }
+
+  25% {
+    box-shadow: 0 0 1px rgb(37, 160, 21), 0 0 2px rgb(42, 255, 4), 0 2px 4px rgb(157, 254, 108);
+  }
+
+  50% {
+    box-shadow: 0 0 1px rgb(11, 8, 104), 0 0 2px rgb(0, 13, 255), 0 2px 4px rgb(123, 158, 253)
+  }
+
+  75% {
+    box-shadow: 0 0 1px rgb(87, 5, 87), 0 0 2px rgb(255, 0, 255), 0 2px 4px rgb(255, 94, 255);
+  }
+
+  100% {
+    box-shadow: 0 0 1px rgb(255, 240, 71), 0 0 2px rgb(233, 167, 1), 0 2px 4px rgb(132, 3, 3);
+  }
+}
+
+@keyframes gradientAnimation {
+  0% {
+    box-shadow: 0 0 1px #3d3d3d;
+  }
+
+  25% {
+    box-shadow: 0 0 1px #5a5a5a;
+  }
+
+  50% {
+    box-shadow: 0 0 1px #7a7a7a;
+  }
+
+  75% {
+    box-shadow: 0 0 1px #9a9a9a;
+  }
+
+  100% {
+    box-shadow: 0 0 1px #bdbdbd;
+  }
+}
+
+.use-gradient-animation {
+  animation: gradientAnimation 3s infinite alternate;
 }

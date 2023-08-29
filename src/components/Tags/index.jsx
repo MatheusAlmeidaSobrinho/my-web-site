@@ -1,10 +1,17 @@
 import styles from './Tags.module.scss'
 import PropTypes from 'prop-types'
+import { useLanguage } from '../../hooks/useLanguage'
+import { contents } from '../../assets/translate/contents'
 
 export default function Tags({ tags, filtraFotos, tagSelecionada }) {
+  const { currentLanguage } = useLanguage()
+
   return (
     <div className={styles.tags}>
-      <p>Filtre por função: {tagSelecionada}</p>
+      <p>
+        {contents.tools.previewTag[currentLanguage]}
+        {tagSelecionada}
+      </p>
       <ul className={styles.tags__lista}>
         <li onClick={() => filtraFotos()}>Todas</li>
         {tags.map(tag => {

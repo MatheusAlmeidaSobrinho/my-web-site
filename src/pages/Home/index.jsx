@@ -12,11 +12,11 @@ import Weather from '../../components/Weather/Weather'
 import CoinCounter from '../../components/CoinCounter/CoinCounter'
 import Player from '../../components/Player/Player'
 import Footer from '../../components/Footer/Footer'
+import GptApi from '../../components/GptApi/GptApi'
 import logoDark from '../../assets/images/logoDark.svg'
 import logoLight from '../../assets/images/logoLight.svg'
 import { useEffect, useState } from 'react'
 import { BiExit, BiLogIn, BiRegistered } from 'react-icons/bi'
-import GptApi from '../../components/GptApi/GptApi'
 
 export default function Home() {
   const { theme, changeTheme } = useTheme()
@@ -121,7 +121,8 @@ export default function Home() {
                 {currentPage === '/accountuser' && 'My Space'}
                 {currentPage === '/accountadmin' && 'Adm Space'}
                 {currentPage === '/blog' && 'Blog'}
-                {currentPage === '/games' && 'Games'}
+                {currentPage === '/games' &&
+                  contents.home.tGamesGuideHome[currentLanguage]}
                 {currentPage === '/toolsIa' &&
                   contents.home.pageTools[currentLanguage]}
                 {currentPage === '/potatoApi' && 'Potato API'}
@@ -159,7 +160,7 @@ export default function Home() {
                     to="/games"
                     className={location.pathname === '/games' ? 'active' : ''}
                   >
-                    <li>Games</li>
+                    <li>{contents.home.tGamesGuideHome[currentLanguage]}</li>
                   </Link>
 
                   <Link

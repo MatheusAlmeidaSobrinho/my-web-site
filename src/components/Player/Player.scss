@@ -1,3 +1,5 @@
+@import "../../styles/globalStyles.scss";
+
 .player {
   margin: 0;
   padding: 0;
@@ -10,16 +12,16 @@
   justify-content: center;
 
 
-  #audio-element {
+  .audio-element {
     width: 14vw;
-    margin: 0.2rem;
-    background-color: none;
+    margin: 0.5rem;
+    background: none;
     border-radius: 1.5rem;
-    border: 2px solid transparent;
     transition: all 0.25s ease-in-out;
+    animation: $animation;
   }
 
-  #audio-element:hover {
+  .audio-element:hover {
     width: 20vw;
   }
 
@@ -28,47 +30,31 @@
   }
 
   &.dark {
-    #audio-element::-webkit-media-controls-panel {
+    .audio-element::-webkit-media-controls-panel {
       background: rgb(61, 61, 61);
     }
 
-    #audio-element::-webkit-media-controls-play-button {
-      background-color: rgb(61, 61, 61);
 
-    }
-
-    #audio-element::-webkit-media-controls-volume-slider {
-      background-color: rgb(61, 61, 61);
-    }
-
-    #audio-element {
-      border: 2px solid orangered;
+    .audio-element::-webkit-media-controls-volume-slider {
+      background: rgb(61, 61, 61);
     }
 
     button {
-      color: orangered;
+      color: $darkColor;
     }
   }
 
   &.light {
-    #audio-element::-webkit-media-controls-panel {
-      background-color: #ededed;
+    .audio-element::-webkit-media-controls-panel {
+      background: #ededed;
     }
 
-    #audio-element::-webkit-media-controls-play-button {
-      background-color: #ededed;
-    }
-
-    #audio-element::-webkit-media-controls-volume-slider {
-      background-color: #ededed;
-    }
-
-    #audio-element {
-      border: 2px solid purple;
+    .audio-element::-webkit-media-controls-volume-slider {
+      background: #ededed;
     }
 
     button {
-      color: purple;
+      color: $lightColor;
     }
   }
 

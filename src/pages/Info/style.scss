@@ -1,3 +1,5 @@
+@import "../../styles/globalStyles.scss";
+
 .info-container {
   display: flex;
   flex-direction: column;
@@ -78,7 +80,7 @@
           }
 
           a:hover {
-            color: orangered;
+            color: $darkColor;
             background-color: rgb(249, 171, 112);
           }
         }
@@ -101,8 +103,8 @@
     }
 
     a:hover {
-      color: orangered;
-      border-bottom: 3px solid orangered;
+      color: $darkColor;
+      border-bottom: 2px solid $darkColor;
     }
   }
 }

@@ -1,10 +1,12 @@
 import axios from 'axios'
 import { useState } from 'react'
 import './GptApi.scss'
+import { useTheme } from '../../hooks/useTheme'
 
 export default function GptApi() {
   const [texto, setTexto] = useState('')
   const [resposta, setResposta] = useState('')
+  const { theme } = useTheme()
 
   function generateText() {
     const prompt = texto
@@ -12,7 +14,7 @@ export default function GptApi() {
     const maxTokens = 2048
 
     const REACT_APP_OPENAI_API_KEY =
-      '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'
+      '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'
 
     axios
       .post(
@@ -36,7 +38,7 @@ export default function GptApi() {
       })
       .catch(error => {
         console.error(error)
-        setResposta(error)
+        setResposta('No momento a Api se encontra com multiplos usos =/')
       })
   }
 
@@ -57,13 +59,13 @@ export default function GptApi() {
   }
 
   return (
-    <div className="component-chatGpt">
+    <div className={`component-chatGpt ${theme}`}>
       <div className="container-text">
         <textarea
           value={resposta}
           rows="19"
           disabled
-          placeholder="Aguardando sua pergunta mestre ^-^"
+          placeholder="Me pergunte algo"
         />
 
         <input

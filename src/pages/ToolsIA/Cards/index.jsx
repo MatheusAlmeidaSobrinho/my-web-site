@@ -15,7 +15,7 @@ export default function Cards({ itens, styles }) {
     <div>
       {/* Renderizar cada lista separadamente */}
       {Object.entries(groupedItens).map(([tag, itemList]) => (
-        <div key={tag}>
+        <div key={tag} className={styles.ToolsIA__containerCards}>
           <h2>{tag}</h2>
           <ul className={styles.ToolsIA__cards}>
             {itemList.map(item => (
@@ -26,9 +26,15 @@ export default function Cards({ itens, styles }) {
                   alt={item.title}
                 />
                 <div className={styles.ToolsIA__description}>
-                  <p>{item.title}</p>
-                  <p>{item.function}</p>
-                  <Link to="/">Ver</Link>
+                  <p className={styles.ToolsIA__description__nameTool}>
+                    {item.title}
+                  </p>
+                  <p className={styles.ToolsIA__description__overflow}>
+                    {item.function}
+                  </p>
+                  <Link to={item.link} target="_blank">
+                    Ver
+                  </Link>
                 </div>
               </li>
             ))}
