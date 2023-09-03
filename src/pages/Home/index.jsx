@@ -1,5 +1,4 @@
 import './Home.scss'
-
 import { contents } from '../../assets/translate/contents'
 import { Link, Outlet, useLocation } from 'react-router-dom'
 import { useAcessibility } from '../../hooks/useAcessibility'
@@ -13,8 +12,6 @@ import CoinCounter from '../../components/CoinCounter/CoinCounter'
 import Player from '../../components/Player/Player'
 import Footer from '../../components/Footer/Footer'
 import GptApi from '../../components/GptApi/GptApi'
-import logoDark from '../../assets/images/logoDark.svg'
-import logoLight from '../../assets/images/logoLight.svg'
 import { useEffect, useState } from 'react'
 import { BiExit, BiLogIn, BiRegistered } from 'react-icons/bi'
 
@@ -52,16 +49,38 @@ export default function Home() {
       <Player />
       <Footer />
       <div className="header-component">
-        <div className="logo-component">
-          {theme === 'dark' ? (
-            <Link to="/">
-              <img src={logoDark} alt="" />
-            </Link>
-          ) : (
-            <Link to="/">
-              <img src={logoLight} alt="" />
-            </Link>
-          )}
+        <div className={`logo-component svg-${theme}`}>
+          <Link to="/">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="80px"
+              height="80px"
+              viewBox="-4.8 -4.8 57.60 57.60"
+              strokeWidth="4"
+            >
+              <g id="SVGRepo_bgCarrier" strokeWidth="0" />
+              <g
+                id="SVGRepo_tracerCarrier"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+              >
+                <g className="c">
+                  <polyline points="11.9123 36.1233 11.9123 11.85 24 36.15 36.0877 11.8869 36.0877 36.15" />
+                </g>
+                <g className="c">
+                  <circle cx="24" cy="24" r="21.5" />
+                </g>
+              </g>
+              <g id="SVGRepo_iconCarrier">
+                <g className="c">
+                  <polyline points="11.9123 36.1233 11.9123 11.85 24 36.15 36.0877 11.8869 36.0877 36.15" />
+                </g>
+                <g className="c">
+                  <circle cx="24" cy="24" r="21.5" />
+                </g>
+              </g>
+            </svg>
+          </Link>
         </div>
         {!isAuthenticated() ? (
           <div className="nav-component">

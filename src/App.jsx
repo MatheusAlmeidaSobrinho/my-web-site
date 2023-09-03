@@ -29,8 +29,8 @@ const App = () => {
   useLayoutEffect(() => {
     document.documentElement.style.backgroundImage =
       theme === 'dark'
-        ? 'linear-gradient(120deg, #185a47, #25185a , #4d185a)'
-        : 'linear-gradient(120deg, #70e3c2, #a693f0, #7eebbf)'
+        ? 'linear-gradient(120deg, #190947, #a349bf, #5a1bb1 , #a349bf, #190947)'
+        : 'linear-gradient(120deg, #a349bf, #a693f0, #e293f0, #a693f0, #a349bf)'
   }, [theme])
 
   return (

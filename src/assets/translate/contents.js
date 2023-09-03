@@ -199,5 +199,39 @@ export const contents = {
       english: 'Filter by function:',
       portuguese: 'Filtre por função: '
     }
+  },
+  weather: {
+    errorResp: {
+      english: 'Invalid city.',
+      portuguese: 'Cidade inválida.'
+    },
+    placeHolder: {
+      english: 'City Name',
+      portuguese: 'Nome da cidade'
+    },
+    buttonSubmit: {
+      english: 'Submit',
+      portuguese: 'Enviar'
+    },
+    temp: {
+      english: 'Temperature: ',
+      portuguese: 'Temperatura: '
+    },
+    humidity: {
+      english: 'Humidity: ',
+      portuguese: 'Umidade: '
+    },
+    description: {
+      english: 'Condition: ',
+      portuguese: 'Condição: '
+    },
+    windSpeed: {
+      english: 'Wind Speed: ',
+      portuguese: 'Vel do Vento: '
+    },
+    windDeg: {
+      english: 'Wind Deg: ',
+      portuguese: 'Direção do Vento: '
+    }
   }
 }

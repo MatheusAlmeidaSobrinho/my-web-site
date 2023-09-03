@@ -2,6 +2,7 @@
 
 .page-home {
   width: 100%;
+  transition: all 0.25s ease-in-out;
 
   .header-component {
     display: flex;
@@ -13,11 +14,18 @@
     height: 12vh;
 
     .logo-component {
-
       a {
         img {
           width: 100%;
           height: auto;
+        }
+      }
+
+      svg {
+        g.c {
+          fill: none;
+          stroke-linecap: round;
+          stroke-linejoin: round;
         }
       }
     }
@@ -122,11 +130,8 @@
         padding-bottom: 0.75rem;
 
         a {
+          transition: all 0.25s ease-in-out;
           font-weight: 700;
-
-          &:hover {
-            color: rgb(252, 160, 127);
-          }
         }
       }
 
@@ -149,14 +154,12 @@
 
 
       .logo-component {
-
-        a {
-          h1 {
-            color: $darkColor;
+        svg {
+          g.c {
+            stroke: $darkColor;
           }
         }
       }
-
 
       .configurations-component {
         .configurations-item {
@@ -164,6 +167,10 @@
           select,
           option {
             color: $darkColor;
+          }
+
+          option {
+            background: $lightColor;
           }
 
           select:hover,
@@ -209,13 +216,17 @@
       }
 
       .dropdown .dropdown-menu {
-        background-color: rgb(95, 95, 95);
+        background: $lightColor;
+        opacity: 0.9;
+
 
         li {
           color: $darkColor;
 
+
           &:hover {
-            background-color: rgb(50, 50, 50);
+            background: $lightColor;
+            filter: brightness(1.25);
           }
         }
       }
@@ -226,7 +237,7 @@
         p {
           a {
             &:hover {
-              color: rgb(252, 160, 127);
+              color: $lightColor;
             }
           }
         }
@@ -249,13 +260,10 @@
     }
 
     .header-component {
-
-
       .logo-component {
-
-        a {
-          h1 {
-            color: $lightColor;
+        svg {
+          g.c {
+            stroke: $lightColor;
           }
         }
       }
@@ -266,6 +274,10 @@
           select,
           option {
             color: $lightColor;
+          }
+
+          option {
+            background: $darkColor;
           }
 
           select:hover,
@@ -311,24 +323,28 @@
       }
 
       .dropdown .dropdown-menu {
-        background-color: rgb(206, 206, 206);
+        background-color: $darkColor;
+        opacity: 0.9;
 
         li {
           color: $lightColor;
 
           &:hover {
-            background-color: rgb(178, 178, 178);
+            background-color: $darkColor;
+            filter: brightness(1.25);
           }
         }
       }
     }
 
     .main-component {
+
+
       .instructions-component {
         p {
           a {
             &:hover {
-              color: rgb(249, 165, 249);
+              color: $darkColor;
             }
           }
         }

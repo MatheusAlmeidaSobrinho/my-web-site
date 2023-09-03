@@ -66,7 +66,7 @@
     img {
       width: 3rem;
       height: 3rem;
-
+      transition: all 0.25s ease-in-out;
     }
   }
 
@@ -75,15 +75,7 @@
     transition: transform 0.25s;
   }
 
-  .icons a::before {
-    transition: opacity 0.25s;
-  }
-
   .icons a:hover img {
     transform: scale(1.1);
-  }
-
-  .icons a:hover::before {
-    opacity: 1;
   }
 }

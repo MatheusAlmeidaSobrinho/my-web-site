@@ -1,9 +1,17 @@
 import { useEffect, useState } from 'react'
+import { contents } from '../../assets/translate/contents'
 import { getWeatherData } from '../../../weatherAPI'
 import './Weather.scss'
 import { useAcessibility } from '../../hooks/useAcessibility'
 import { useTheme } from '../../hooks/useTheme'
 import { useLanguage } from '../../hooks/useLanguage'
+import {
+  FaTemperatureHigh,
+  FaTint,
+  FaCloud,
+  FaWind,
+  FaCompass
+} from 'react-icons/fa'
 
 export default function Weather() {
   const [weatherData, setWeatherData] = useState(null)
@@ -80,29 +88,62 @@ export default function Weather() {
           <input
             type="text"
             onChange={handleInputChange}
-            placeholder="Nome da cidade"
+            placeholder={contents.weather.placeHolder[currentLanguage]}
           />
-          <button onClick={handleSubmit}>Enviar</button>
+          <button onClick={handleSubmit}>
+            {contents.weather.buttonSubmit[currentLanguage]}
+          </button>
         </div>
       ) : (
         <div>
           {invalidCity ? (
             <div className="weather-search-invalid">
-              <p>Cidade inválida.</p>
+              <p>{contents.weather.errorResp[currentLanguage]}</p>
               <input
                 type="text"
                 onChange={handleInputChange}
-                placeholder="Nome da cidade"
+                placeholder={contents.weather.placeHolder[currentLanguage]}
               />
-              <button onClick={handleSubmit}>Enviar</button>
+              <button onClick={handleSubmit}>
+                {contents.weather.buttonSubmit[currentLanguage]}
+              </button>
             </div>
           ) : (
             <div className="weather-display-working">
               {weatherData && (
                 <div className="weather-display-status-200">
                   <h3>{weatherData.name}</h3>
-                  <p>Temperatura: {weatherData.main.temp}°C</p>
-                  <p>Umidade: {weatherData.main.humidity}%</p>
+                  <p>
+                    <FaTemperatureHigh />
+                    {contents.weather.temp[currentLanguage]}
+                    {weatherData.main.temp}°C
+                  </p>
+                  <p>
+                    <FaTint />
+                    {contents.weather.humidity[currentLanguage]}
+                    {weatherData.main.humidity}%
+                  </p>
+                  {weatherData.weather && (
+                    <p>
+                      <FaCloud />
+                      {contents.weather.description[currentLanguage]}
+                      {weatherData.weather[0].description}
+                    </p>
+                  )}
+                  {weatherData.wind && (
+                    <p>
+                      <FaWind />
+                      {contents.weather.windSpeed[currentLanguage]}
+                      {weatherData.wind.speed} m/s
+                    </p>
+                  )}
+                  {weatherData.wind && (
+                    <p>
+                      <FaCompass />
+                      {contents.weather.windDeg[currentLanguage]}
+                      {weatherData.wind.deg}°
+                    </p>
+                  )}
                   <button onClick={handleReset} className="button200">
                     Alterar cidade
                   </button>

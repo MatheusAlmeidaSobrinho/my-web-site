@@ -50,7 +50,9 @@ function Player() {
         <source src={musicList[currentTrackIndex]} type="audio/mpeg" />
         Seu navegador não suporta a reprodução de áudio.
       </audio>
-      <button onClick={handleNextButtonClick}>Próxima Música</button>
+      <div className="buttonDiv">
+        <button onClick={handleNextButtonClick}>Próxima Música</button>
+      </div>
     </div>
   )
 }

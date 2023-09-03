@@ -4,16 +4,37 @@
   margin: 0.75rem 0;
   padding: 0;
   position: fixed;
-  bottom: 140px;
+  bottom: 170px;
   left: 5px;
   display: flex;
   align-items: center;
 
+  svg {
+    width: 40px;
+
+    path {
+      fill: none;
+    }
+  }
+
+  .coin-value {
+    font-size: 0.75rem;
+  }
+
 }
 
-.coin-value {
+.dark {
+  svg {
+    path {
+      stroke: $darkColor;
+    }
+  }
+}
 
-  img {
-    width: 30px;
+.light {
+  svg {
+    path {
+      stroke: $lightColor;
+    }
   }
 }

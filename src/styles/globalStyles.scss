@@ -6,15 +6,15 @@ html {
   text-align: justify;
 
   ::-webkit-scrollbar {
-    width: 10px;
+    width: 8px;
   }
 
   ::-webkit-scrollbar-thumb {
-    background-color: #797979;
+    background-color: #e2cdff;
   }
 
   ::-webkit-scrollbar-track {
-    background-color: #dadada;
+    background-color: #ba6adc;
   }
 }
 
@@ -86,31 +86,48 @@ button {
 }
 
 $backgroundDark: none;
-$darkColor: orangered;
-$lightColor: purple;
+$darkColor: #e2cdff;
+$lightColor: #410b4f;
 
 $animation: neonAnimation 5s ease-in-out infinite;
+
+$radiusNineTen: radiusNineTenAnimation 0.3s ease-in-out forwards;
+
+
+@keyframes radiusNineTenAnimation {
+  0% {
+    transform: none;
+  }
+
+  100% {
+    transform: rotate(90deg);
+    transform-origin: left top;
+    bottom: 70%;
+    left: 15%;
+  }
+
+}
 
 @keyframes neonAnimation {
 
   0% {
-    box-shadow: 0 0 1px rgb(160, 21, 21), 0 0 2px rgb(255, 4, 4), 0 2px 4px rgb(254, 108, 108);
+    box-shadow: 0 0 1px #190947, 0 0 2px #a349bf, 0 2px 4px #5a1bb1;
   }
 
   25% {
-    box-shadow: 0 0 1px rgb(37, 160, 21), 0 0 2px rgb(42, 255, 4), 0 2px 4px rgb(157, 254, 108);
+    box-shadow: 0 0 1px rgb(214, 67, 131), 0 0 2px rgb(245, 103, 238), 0 2px 4px rgb(220, 139, 170);
   }
 
   50% {
-    box-shadow: 0 0 1px rgb(11, 8, 104), 0 0 2px rgb(0, 13, 255), 0 2px 4px rgb(123, 158, 253)
+    box-shadow: 0 0 1px rgb(70, 8, 104), 0 0 2px rgb(111, 0, 255), 0 2px 4px rgb(175, 123, 253)
   }
 
   75% {
-    box-shadow: 0 0 1px rgb(87, 5, 87), 0 0 2px rgb(255, 0, 255), 0 2px 4px rgb(255, 94, 255);
+    box-shadow: 0 0 1px rgb(87, 5, 87), 0 0 2px rgb(250, 111, 209), 0 2px 4px rgb(245, 158, 245);
   }
 
   100% {
-    box-shadow: 0 0 1px rgb(255, 240, 71), 0 0 2px rgb(233, 167, 1), 0 2px 4px rgb(132, 3, 3);
+    box-shadow: 0 0 1px #190947, 0 0 2px #a349bf, 0 2px 4px #5a1bb1;
   }
 }
 

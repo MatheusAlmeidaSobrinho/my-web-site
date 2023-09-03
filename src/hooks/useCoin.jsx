@@ -14,8 +14,8 @@ export function CoinProvider(props) {
 
   useEffect(() => {
     const interval = setInterval(() => {
-      setCoins(prevCoins => prevCoins + 0.1)
-    }, 5000)
+      setCoins(prevCoins => prevCoins + 0.02)
+    }, 1000)
 
     return () => {
       clearInterval(interval)
