@@ -200,6 +200,74 @@ export const contents = {
       portuguese: 'Filtre por função: '
     }
   },
+  player: {
+    yourNavegator: {
+      english: 'Invalid city.',
+      portuguese: 'Your browser does not support audio playback.'
+    },
+    nextMusic: {
+      english: 'Next Music',
+      portuguese: 'Proxima musica'
+    }
+  },
+  coinCounter: {
+    rankBronze: {
+      english: 'Captain Potato',
+      portuguese: 'Capitão Batata'
+    },
+    rankSilver: {
+      english: 'Major Potato',
+      portuguese: 'Major Batata'
+    },
+    rankGold: {
+      english: 'Lieutenant Potato',
+      portuguese: 'Tenente Batata'
+    },
+    rankPlatinum: {
+      english: 'Colonel Potato',
+      portuguese: 'Coronel Batata'
+    },
+    rankDiamond: {
+      english: 'General Potato',
+      portuguese: 'General Batata'
+    },
+    rankMaster: {
+      english: 'Marshal Potato',
+      portuguese: 'Marechal Batata'
+    }
+  },
+  footer: {
+    heyMan: {
+      english: 'Whats up Dev',
+      portuguese: 'Eai Dev'
+    }
+  },
+  gptApi: {
+    askMe: {
+      english: 'Ask me something',
+      portuguese: 'Me pergunte algo'
+    },
+    ask: {
+      english: 'Ask',
+      portuguese: 'Perguntar'
+    },
+    resp: {
+      english: 'Write',
+      portuguese: 'Escrever'
+    },
+    clear: {
+      english: 'Clear',
+      portuguese: 'Limpar'
+    },
+    multUse: {
+      english: 'At the moment the API has multiple uses =/',
+      portuguese: 'No momento a Api se encontra com multiplos usos =/'
+    },
+    micro: {
+      english: 'Microphone',
+      portuguese: 'Microfone'
+    }
+  },
   weather: {
     errorResp: {
       english: 'Invalid city.',
@@ -232,6 +300,10 @@ export const contents = {
     windDeg: {
       english: 'Wind Deg: ',
       portuguese: 'Direção do Vento: '
+    },
+    changeCity: {
+      english: 'Change City',
+      portuguese: 'Alterar cidade'
     }
   }
 }

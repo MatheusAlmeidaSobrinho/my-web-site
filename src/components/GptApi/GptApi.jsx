@@ -2,11 +2,14 @@ import axios from 'axios'
 import { useState } from 'react'
 import './GptApi.scss'
 import { useTheme } from '../../hooks/useTheme'
+import { contents } from '../../assets/translate/contents'
+import { useLanguage } from '../../hooks/useLanguage'
 
 export default function GptApi() {
   const [texto, setTexto] = useState('')
   const [resposta, setResposta] = useState('')
   const { theme } = useTheme()
+  const { currentLanguage } = useLanguage()
 
   function generateText() {
     const prompt = texto
@@ -38,7 +41,7 @@ export default function GptApi() {
       })
       .catch(error => {
         console.error(error)
-        setResposta('No momento a Api se encontra com multiplos usos =/')
+        setResposta(`${contents.gptApi.multUse[currentLanguage]}`)
       })
   }
 
@@ -65,26 +68,30 @@ export default function GptApi() {
           value={resposta}
           rows="19"
           disabled
-          placeholder="Me pergunte algo"
+          placeholder={contents.gptApi.askMe[currentLanguage]}
         />
 
         <input
           type="text"
-          placeholder="Escreva..."
+          placeholder={contents.gptApi.resp[currentLanguage]}
           onChange={e => setTexto(e.target.value)}
           value={texto}
         />
       </div>
 
       <div className="btn-container">
-        <button onClick={captureAudioClick}>Microfone</button>
+        <button onClick={captureAudioClick}>
+          {contents.gptApi.micro[currentLanguage]}
+        </button>
         <button type="button" onClick={generateText}>
-          Perguntar
+          {contents.gptApi.ask[currentLanguage]}
         </button>
         {texto === '' ? (
           <span></span>
         ) : (
-          <button onClick={handleClearButtonClick}>Limpar</button>
+          <button onClick={handleClearButtonClick}>
+            {contents.gptApi.clear[currentLanguage]}
+          </button>
         )}
       </div>
     </div>

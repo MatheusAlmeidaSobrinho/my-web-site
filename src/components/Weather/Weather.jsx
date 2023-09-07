@@ -145,7 +145,7 @@ export default function Weather() {
                     </p>
                   )}
                   <button onClick={handleReset} className="button200">
-                    Alterar cidade
+                  {contents.weather.changeCity[currentLanguage]}
                   </button>
                 </div>
               )}

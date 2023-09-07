@@ -5,13 +5,17 @@ import githubSvgLight from '../../assets/images/githubSvgLight.svg'
 import linkedinSvgDark from '../../assets/images/linkedinSvgDark.svg'
 import linkedinSvgLight from '../../assets/images/linkedinSvgLight.svg'
 import './Footer.scss'
+import { contents } from '../../assets/translate/contents'
+import { useLanguage } from '../../hooks/useLanguage'
 
 export default function Footer() {
   const { theme } = useTheme()
+  const { currentLanguage } = useLanguage()
 
   return (
     <div className={`footer ${theme}`}>
-      <p className="potato">Fala ae</p>
+      <p className="text-potato">{contents.footer.heyMan[currentLanguage]}</p>
+      <p className="potato"></p>
       <div className="icons">
         {theme === 'dark' ? (
           <>

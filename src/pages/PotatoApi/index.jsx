@@ -1,9 +1,9 @@
-import styles from './PotatoApi.module.scss'
+import './PotatoApi.scss'
 
 export default function PotatoApi() {
   return (
-    <section className={styles.potatoApi}>
-      <h3>PAGINA SOBRE PotatoApi que sera desenvolvida futuramente.</h3>
+    <section className='potatoApi-page'>
+      <h3>Pagina sobre PotatoApi que sera desenvolvida futuramente.</h3>
     </section>
   )
 }

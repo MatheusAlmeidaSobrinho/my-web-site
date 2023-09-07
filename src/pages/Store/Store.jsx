@@ -1,5 +1,6 @@
 import { useCoin } from '../../hooks/useCoin'
 import products from './products.json'
+import './Store.scss'
 
 const Store = () => {
   const { coins, addCoins } = useCoin()
@@ -19,10 +20,12 @@ const Store = () => {
   }
 
   return (
-    <div>
-      <h2>Loja</h2>
-      <p>Moedas disponíveis: {coins.toFixed(2)}</p>
-      <div className="products">
+    <div className="store-page">
+      <div className="coins-container">
+        <h2>Loja</h2>
+        <h3>Moedas disponíveis: {coins.toFixed(2)}</h3>
+      </div>
+      <div className="products-container">
         {products.map(product => (
           <div key={product.id} className="product">
             <img src={product.image} alt={product.name} />

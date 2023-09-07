@@ -1,0 +1,16 @@
+.store-page {
+  min-height: 88vh;
+  margin: 1rem;
+
+  .coins-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-bottom: 1rem
+  }
+
+  .products-container {
+    display: flex;
+    gap: 1rem;
+  }
+}

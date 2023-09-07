@@ -1,19 +1,17 @@
-import { useState, useEffect, useRef } from 'react'
+import { useState, useEffect, useRef, useMemo } from 'react'
 import './Player.scss'
 import { useTheme } from '../../hooks/useTheme'
 import musicOne from '../../assets/musics/backgroundMusic.mp3'
 import musicTwo from '../../assets/musics/backgroundMusicTwo.mp3'
 import musicThree from '../../assets/musics/backgroundMusicThree.mp3'
+import { useLanguage } from '../../hooks/useLanguage'
+import { contents } from '../../assets/translate/contents'
 
 function Player() {
   const { theme } = useTheme()
   const [currentTrackIndex, setCurrentTrackIndex] = useState(0)
 
-  const audioOneSrc = musicOne
-  const audioTwoSrc = musicTwo
-  const audioThreeSrc = musicThree
-
-  const musicList = [audioOneSrc, audioTwoSrc, audioThreeSrc]
+  const musicList = useMemo(() => [musicOne, musicTwo, musicThree], [])
 
   const audioRef = useRef(null)
 
@@ -44,14 +42,18 @@ function Player() {
     audioElement.play()
   }
 
+  const { currentLanguage } = useLanguage()
+
   return (
     <div className={`player ${theme}`}>
       <audio className="audio-element" ref={audioRef} controls>
         <source src={musicList[currentTrackIndex]} type="audio/mpeg" />
-        Seu navegador não suporta a reprodução de áudio.
+        {contents.player.yourNavegator[currentLanguage]}
       </audio>
       <div className="buttonDiv">
-        <button onClick={handleNextButtonClick}>Próxima Música</button>
+        <button onClick={handleNextButtonClick}>
+          {contents.player.nextMusic[currentLanguage]}
+        </button>
       </div>
     </div>
   )

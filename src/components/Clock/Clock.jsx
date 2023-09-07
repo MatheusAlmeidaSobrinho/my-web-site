@@ -1,8 +1,20 @@
 import { useState, useEffect } from 'react'
 import './Clock.css'
+import { useLanguage } from '../../hooks/useLanguage'
 
-function Clock() {
+export default function Clock() {
   const [date, setDate] = useState(new Date())
+  const optionsWeek = { weekday: 'long' }
+  const { currentLanguage } = useLanguage()
+  const language = currentLanguage
+  const locale = language === 'portuguese' ? 'pt-BR' : 'en-US'
+  const weekday = date
+    .toLocaleDateString(locale, optionsWeek)
+    .replace(/^\w/, c => c.toUpperCase())
+
+  const optionsAll = { day: 'numeric', month: 'numeric', year: '2-digit' }
+  const formattedDate = date.toLocaleDateString(undefined, optionsAll)
+  const formattedTime = date.toLocaleTimeString()
 
   useEffect(() => {
     const timer = setInterval(() => {
@@ -14,23 +26,12 @@ function Clock() {
     }
   }, [])
 
-  const options = {
-    weekday: 'long',
-    day: 'numeric',
-    month: 'numeric',
-    year: '2-digit'
-  }
-  const formattedDate = date
-    .toLocaleDateString(undefined, options)
-    .replace(/^\w/, c => c.toUpperCase())
-  const formattedTime = date.toLocaleTimeString()
-
   return (
     <div className="clock-container">
-      <p>{formattedDate}</p>
+      <p>
+        {weekday}, {formattedDate}
+      </p>
       <p>Hora: {formattedTime}</p>
     </div>
   )
 }
-
-export default Clock

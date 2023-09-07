@@ -1,10 +1,22 @@
 @import "../../styles/globalStyles.scss";
 
 .weather-container {
+
+  width: 15vw;
+
+  padding: 0;
+  margin: 0;
+  border: 0;
+
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+
   font-size: 0.75rem;
   position: fixed;
-  bottom: 60px;
-  left: 10px;
+  bottom: 55px;
+  left: 0;
 
   button,
   input {

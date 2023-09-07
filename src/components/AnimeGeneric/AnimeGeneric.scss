@@ -1,0 +1,146 @@
+@import "../../styles/globalStyles.scss";
+
+.container-anime-generic {
+  padding: 0.25rem;
+  margin-bottom: 0.75rem;
+  border-radius: 0.5rem;
+  display: flex;
+  flex-direction: column;
+
+  .name-plus-favorite {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+
+    h2 {
+      font-size: 1.5rem;
+      cursor: pointer;
+      opacity: 0.75;
+      padding: 0.25rem;
+      border-radius: 0.5rem;
+      background: none;
+      width: 95%;
+
+      &:hover {
+        opacity: 1;
+        filter: brightness(1.15);
+      }
+    }
+
+    span {
+      width: 5%;
+      text-align: center;
+    }
+  }
+
+  .container-temporada-generic {
+
+    .container-episodio-generic {
+      background: none;
+      padding: 0.5rem;
+
+      h2 {
+        font-size: 1.25rem;
+        cursor: pointer;
+        margin-bottom: 0.25rem;
+        opacity: 0.75;
+        padding: 0.25rem;
+        border-radius: 0.5rem;
+
+        &:hover {
+          opacity: 1;
+          filter: brightness(1.15);
+        }
+      }
+
+      .episodio-generic-p {
+        background: none;
+        display: flex;
+        flex-direction: column;
+
+        a {
+          font-size: 1rem;
+          cursor: pointer;
+          opacity: 0.75;
+          padding: 0.25rem 1rem;
+          border-radius: 0.5rem;
+          margin-bottom: 0.25rem;
+
+          &:hover {
+            opacity: 1;
+            filter: brightness(1.15);
+          }
+        }
+      }
+    }
+  }
+
+  &.dark {
+
+    background: $lightColor;
+
+    h2 {
+      &:hover {
+        background: $lightColor;
+      }
+    }
+
+    .container-temporada-generic {
+      .container-episodio-generic {
+        h2 {
+          background: $darkOpacityColor;
+
+          &:hover {
+            background: $lightColor;
+          }
+        }
+
+        .episodio-generic-p {
+
+          a {
+            background: $darkOpacityColor;
+
+            &:hover {
+              background: $lightColor;
+            }
+          }
+        }
+      }
+    }
+
+  }
+
+  &.light {
+    background: $darkColor;
+
+    h2 {
+      &:hover {
+        background: $darkColor;
+      }
+    }
+
+    .container-temporada-generic {
+      .container-episodio-generic {
+        h2 {
+          background: $lightOpacityColor;
+
+          &:hover {
+            background: $darkColor;
+          }
+        }
+
+        .episodio-generic-p {
+
+          a {
+            background: $lightOpacityColor;
+
+            &:hover {
+              background: $darkColor;
+            }
+          }
+        }
+      }
+    }
+  }
+}

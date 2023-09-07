@@ -290,27 +290,25 @@
       .login-component {
 
         .ifLogin a:hover {
-          border-bottom: $lightColor;
+          border-bottom: 2px solid $lightColor;
         }
 
         .ifLogout a:hover {
-          border-bottom: $lightColor;
+          border-bottom: 2px solid $lightColor;
         }
 
         p a.login-account span:hover {
-          border-bottom: $lightColor;
+          border-bottom: 2px solid $lightColor;
         }
 
         .login-button-logout:hover {
-          border-bottom: $lightColor;
+          border-bottom: 2px solid $lightColor;
         }
       }
 
     }
 
     .nav-component {
-
-
       .dropdown {
 
         button {
@@ -318,7 +316,7 @@
         }
 
         &:hover {
-          border-bottom: $lightColor;
+          border-bottom: 2px solid $lightColor;
         }
       }
 

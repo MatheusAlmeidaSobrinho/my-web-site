@@ -1,0 +1,159 @@
+{
+  "animes": [
+        {
+          "nome": "Another",
+          "temporadas": [
+            {
+              "nome": "Temporada-1",
+              "episodios": ["Episodio-1", "Episodio-2", "Episodio-3"]
+            },
+            {
+              "nome": "Temporada-2",
+              "episodios": ["Episodio-1", "Episodio-2", "Episodio-3"]
+            }
+          ]
+        },
+        {
+          "nome": "Black-Clover",
+          "temporadas": [
+            {
+              "nome": "Temporada-1",
+              "episodios": ["Episodio-1", "Episodio-2", "Episodio-3"]
+            },
+            {
+              "nome": "Temporada-2",
+              "episodios": ["Episodio-1", "Episodio-2", "Episodio-3"]
+            }
+          ]
+        },
+        {
+      "nome": "Bleach",
+      "temporadas": [
+        {
+          "nome": "Temporada-1",
+          "episodios": ["Episodio-1", "Episodio-2", "Episodio-3"]
+        },
+        {
+          "nome": "Temporada-2",
+          "episodios": ["Episodio-1", "Episodio-2", "Episodio-3"]
+        }
+      ]
+    },
+    {
+      "nome": "Boku-No-Hero-Academia",
+      "temporadas": [
+        {
+          "nome": "Temporada-1",
+          "episodios": ["Boku no Hero Academia - Temporada 1 - Episodio 1", "Episodio-2", "Episodio-3"]
+        },
+        {
+          "nome": "Temporada-2",
+          "episodios": ["Episodio-1", "Episodio-2", "Episodio-3"]
+        }
+      ]
+    },{
+      "nome": "Boruto",
+      "temporadas": [
+        {
+          "nome": "Temporada-1",
+          "episodios": ["Boku no Hero Academia - Temporada 1 - Episodio 1", "Episodio-2", "Episodio-3"]
+        },
+        {
+          "nome": "Temporada-2",
+          "episodios": ["Episodio-1", "Episodio-2", "Episodio-3"]
+        }
+      ]
+    },
+    {
+      "nome": "Dragon-Ball-Super",
+      "temporadas": [
+        {
+          "nome": "Temporada-1",
+          "episodios": ["Episodio-1", "Episodio-2", "Episodio-3"]
+        },
+        {
+          "nome": "Temporada-2",
+          "episodios": ["Episodio-1", "Episodio-2", "Episodio-3"]
+        }
+      ]
+    },
+    {
+      "nome": "Hunter-x-Hunter",
+      "temporadas": [
+        {
+          "nome": "Temporada-1",
+          "episodios": ["Episodio-1", "Episodio-2", "Episodio-3"]
+        },
+        {
+          "nome": "Temporada-2",
+          "episodios": ["Episodio-1", "Episodio-2", "Episodio-3"]
+        }
+      ]
+    },
+    {
+      "nome": "Jujutsu-Kaisen",
+      "temporadas": [
+        {
+          "nome": "Temporada-1",
+          "episodios": ["Episodio-1", "Episodio-2", "Episodio-3"]
+        },
+        {
+          "nome": "Temporada-2",
+          "episodios": ["Episodio-1", "Episodio-2", "Episodio-3"]
+        }
+      ]
+    },
+    {
+      "nome": "Mushoku-Tensei",
+      "temporadas": [
+        {
+          "nome": "Temporada-1",
+          "episodios": ["Episodio-1", "Episodio-2", "Episodio-3"]
+        },
+        {
+          "nome": "Temporada-2",
+          "episodios": ["Episodio-1", "Episodio-2", "Episodio-3"]
+        }
+      ]
+    },
+    {
+      "nome": "Naruto-Shippuden",
+      "temporadas": [
+        {
+          "nome": "Temporada-1",
+          "episodios": ["Episodio-1", "Episodio-2", "Episodio-3"]
+        },
+        {
+          "nome": "Temporada-2",
+          "episodios": ["Episodio-1", "Episodio-2", "Episodio-3"]
+        }
+      ]
+    },
+    {
+      "nome": "One Piece",
+      "temporadas": [
+        {
+          "nome": "Temporada-1",
+          "episodios": ["Episodio-1", "Episodio-2", "Episodio-3"]
+        },
+        {
+          "nome": "Temporada-2",
+          "episodios": ["Episodio-1", "Episodio-2", "Episodio-3"]
+        }
+      ]
+    },
+    {
+      "nome": "Shingeki-No-Kyojin",
+      "temporadas": [
+        {
+          "nome": "Temporada-1",
+          "episodios": ["Episodio-1", "Episodio-2", "Episodio-3"]
+        },
+        {
+          "nome": "Temporada-2",
+          "episodios": ["Episodio-1", "Episodio-2", "Episodio-3"]
+        }
+      ]
+    }
+  ]
+}

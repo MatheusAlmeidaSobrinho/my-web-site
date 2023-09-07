@@ -151,6 +151,10 @@ export default function Home() {
                   contents.home.pageInfo[currentLanguage]}
                 {currentPage === '/store' &&
                   contents.home.pageStore[currentLanguage]}
+                {currentPage === '/projects/projectOne' &&
+                  contents.home.pageProjOneProject[currentLanguage]}
+                {currentPage === '/projects/projectTwo' &&
+                  contents.home.pageProjTwoProject[currentLanguage]}
               </button>
               {isOpen && (
                 <ul className="dropdown-menu" onMouseLeave={closeDropdown}>

@@ -1,18 +1,45 @@
 import { useCoin } from '../../hooks/useCoin'
 import { useTheme } from '../../hooks/useTheme'
 import './CoinCounter.scss'
+import { contents } from '../../assets/translate/contents'
+import { useLanguage } from '../../hooks/useLanguage'
 
 const CoinCounter = () => {
   const { coins } = useCoin()
   const { theme } = useTheme()
+  const { currentLanguage } = useLanguage()
 
   const ranks = [
-    { minCoins: 0, maxCoins: 99, name: 'Rank Bronze' },
-    { minCoins: 100, maxCoins: 249, name: 'Rank Silver' },
-    { minCoins: 250, maxCoins: 499, name: 'Rank Gold' },
-    { minCoins: 500, maxCoins: 749, name: 'Rank Platinum' },
-    { minCoins: 750, maxCoins: 999, name: 'Rank Diamond' },
-    { minCoins: 1000, maxCoins: 999999, name: 'Rank WhatTheFuck?' }
+    {
+      minCoins: 0,
+      maxCoins: 99,
+      name: `${contents.coinCounter.rankBronze[currentLanguage]}`
+    },
+    {
+      minCoins: 100,
+      maxCoins: 249,
+      name: `${contents.coinCounter.rankSilver[currentLanguage]}`
+    },
+    {
+      minCoins: 250,
+      maxCoins: 499,
+      name: `${contents.coinCounter.rankGold[currentLanguage]}`
+    },
+    {
+      minCoins: 500,
+      maxCoins: 749,
+      name: `${contents.coinCounter.rankPlatinum[currentLanguage]}`
+    },
+    {
+      minCoins: 750,
+      maxCoins: 999,
+      name: `${contents.coinCounter.rankDiamond[currentLanguage]}`
+    },
+    {
+      minCoins: 1000,
+      maxCoins: 999999,
+      name: `${contents.coinCounter.rankMaster[currentLanguage]}`
+    }
   ]
 
   const getRankName = coins => {

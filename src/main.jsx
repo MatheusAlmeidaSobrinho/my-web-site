@@ -8,6 +8,7 @@ import { CacheProvider } from './hooks/useCache'
 import { AuthProvider } from './hooks/useAuth'
 import { LocalStorageProvider } from './hooks/useLocalStorage'
 import { CoinProvider } from './hooks/useCoin'
+import { FavoriteProvider } from './hooks/useFavorite'
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
@@ -18,7 +19,9 @@ ReactDOM.createRoot(document.getElementById('root')).render(
             <ThemeProvider>
               <LanguageProvider>
                 <CoinProvider>
-                  <App />
+                  <FavoriteProvider>
+                    <App />
+                  </FavoriteProvider>
                 </CoinProvider>
               </LanguageProvider>
             </ThemeProvider>

@@ -1,16 +1,24 @@
 @import "../../styles/globalStyles.scss";
 
 .coin-counter {
-  margin: 0.75rem 0;
+
+  width: 15vw;
+
   padding: 0;
-  position: fixed;
-  bottom: 170px;
-  left: 5px;
+  margin: 0;
+  border: 0;
+
   display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
   align-items: center;
 
+  position: fixed;
+  bottom: 185px;
+  left: 0;
+
   svg {
-    width: 40px;
+    width: 50px;
 
     path {
       fill: none;

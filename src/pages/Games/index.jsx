@@ -1,8 +1,8 @@
-import styles from './Games.module.scss'
+import './Games.scss'
 
 export default function Games() {
   return (
-    <section className={styles.games}>
+    <section className="games-page">
       <h3>PAGINA SOBRE GAMES</h3>
     </section>
   )

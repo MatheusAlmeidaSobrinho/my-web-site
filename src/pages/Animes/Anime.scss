@@ -1,0 +1,52 @@
+@import "../../styles/globalStyles.scss";
+
+.anime-page {
+  min-height: 88vh;
+  background: none;
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+
+  .anime-search-container {
+    background: none;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-bottom: 1rem;
+
+    input {
+      background: none;
+      border-radius: 0.5rem;
+      padding: 0.5rem;
+
+      &::placeholder {
+        color: none;
+      }
+    }
+  }
+
+
+  &.dark {
+    .anime-search-container {
+      input {
+        background: $lightColor;
+
+        &::placeholder {
+          color: $darkColor;
+        }
+      }
+    }
+  }
+
+  &.light {
+    .anime-search-container {
+      input {
+        background: $darkColor;
+
+        &::placeholder {
+          color: $lightColor;
+        }
+      }
+    }
+  }
+}

@@ -1,8 +1,8 @@
-import styles from './Blog.module.scss'
+import './Blog.scss'
 
 export default function Blog() {
   return (
-    <section className={styles.blog}>
+    <section className="blog-page">
       <h3>Meus Blog sobre conteudo dev</h3>
     </section>
   )
