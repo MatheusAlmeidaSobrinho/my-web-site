@@ -27,10 +27,19 @@ const App = () => {
   const { theme } = useTheme()
 
   useLayoutEffect(() => {
-    document.documentElement.style.backgroundImage =
-      theme === 'dark'
-        ? 'linear-gradient(120deg, #190947, #a349bf, #5a1bb1 , #a349bf, #190947)'
-        : 'linear-gradient(120deg, #a349bf, #a693f0, #e293f0, #a693f0, #a349bf)'
+    let backgroundStyle
+
+    if (theme === 'dark') {
+      backgroundStyle =
+        'linear-gradient(120deg, #190947, #a349bf, #5a1bb1 , #a349bf, #190947)'
+    } else if (theme === 'light') {
+      backgroundStyle =
+        'linear-gradient(120deg, #a349bf, #a693f0, #e293f0, #a693f0, #a349bf)'
+    } else if (theme === 'clean') {
+      backgroundStyle = 'linear-gradient(120deg, #3d3d3d, #242424)'
+    }
+
+    document.documentElement.style.backgroundImage = backgroundStyle
   }, [theme])
 
   return (

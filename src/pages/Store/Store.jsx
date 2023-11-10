@@ -31,10 +31,12 @@ const Store = () => {
             <img src={product.image} alt={product.name} />
             <p>{product.name}</p>
             <p>Valor: {product.value} moedas</p>
-            <button onClick={() => buyItem(product.value)}>Comprar</button>
-            <button onClick={() => handleFavorite(product.id)}>
-              Favoritar
-            </button>
+            <div className="product-buttons">
+              <button onClick={() => buyItem(product.value)}>Comprar</button>
+              <button onClick={() => handleFavorite(product.id)}>
+                Favoritar
+              </button>
+            </div>
           </div>
         ))}
       </div>

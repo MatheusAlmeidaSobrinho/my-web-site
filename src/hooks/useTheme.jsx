@@ -12,7 +12,7 @@ export function ThemeProvider(props) {
     themeLocalStorage === null ? 'dark' : themeLocalStorage
   )
 
-  const themesAllowed = ['dark', 'light']
+  const themesAllowed = ['dark', 'light', 'clean']
 
   function changeTheme(themeRecieved) {
     const themesIsAllowed = themesAllowed.includes(themeRecieved)

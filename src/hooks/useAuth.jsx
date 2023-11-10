@@ -9,7 +9,6 @@ const useAuth = () => {
   const [authenticated, setAuthenticated] = useState(false)
 
   useEffect(() => {
-    // Carregue o token de autenticação do localStorage ao inicializar o contexto
     const token = getItem('token')
     if (token) {
       setAuthenticated(true)

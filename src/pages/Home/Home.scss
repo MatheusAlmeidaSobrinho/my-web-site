@@ -3,6 +3,7 @@
 .page-home {
   width: 100%;
   transition: all 0.25s ease-in-out;
+  min-height: 100vh;
 
   .header-component {
     display: flex;
@@ -12,6 +13,13 @@
     flex-direction: row;
     flex-wrap: wrap;
     height: 12vh;
+    animation: $animation;
+    margin: 0.1rem 0 1rem 0;
+    border-radius: 0.5rem;
+    position: sticky;
+    top: 0.1rem;
+    padding: 0.5rem;
+    z-index: 99999;
 
     .logo-component {
       a {
@@ -58,23 +66,12 @@
         gap: 1rem;
       }
 
-      .ifLogin a {
-        border-bottom: 2px solid transparent;
-      }
-
-      .ifLogout a {
-        border-bottom: 2px solid transparent;
-      }
-
       .login-area {
         display: flex;
         gap: 1rem;
+        align-items: center;
 
         p a.login-account span {
-          border-bottom: 2px solid transparent;
-        }
-
-        .login-button-logout {
           border-bottom: 2px solid transparent;
         }
       }
@@ -87,6 +84,7 @@
     text-align: center;
     background: none;
     position: relative;
+    z-index: 99999;
 
     .dropdown {
       width: 125px;
@@ -125,18 +123,73 @@
     .instructions-component {
       display: flex;
       flex-direction: column;
+      z-index: 99999;
 
-      p {
-        padding-bottom: 0.75rem;
+      .instructions-component-why,
+      .instructions-component-what,
+      .instructions-component-guide {
+        display: grid;
+        animation: $animation;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr;
+        justify-items: center;
+        align-items: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        opacity: 0.825;
+        border-radius: 8px;
+        margin-bottom: 1rem;
+        transition: all 0.75s ease-in-out;
+        padding: 0.5rem;
 
-        a {
-          transition: all 0.25s ease-in-out;
-          font-weight: 700;
+        .instructions-component-why-div,
+        .instructions-component-what-div,
+        .instructions-component-guide-div {
+          animation: $animation;
+          padding: 0.25rem;
+          border-radius: 0.5rem;
+        }
+
+        p {
+          padding-bottom: 0.75rem;
+
+          a {
+            transition: all 0.25s ease-in-out;
+            font-weight: 700;
+          }
         }
       }
 
-    }
+      .instructions-component-why {
+        background-position: center;
+        background-image: url(../../assets/images/wallpaperQuestions.jpg);
 
+        &:hover {
+          opacity: 1;
+          background-position: top;
+        }
+      }
+
+      .instructions-component-what {
+        background-position: center;
+        background-image: url(https://c4.wallpaperflare.com/wallpaper/740/655/787/bleach-kurosaki-ichigo-mugetsu-wallpaper-preview.jpg);
+
+        &:hover {
+          opacity: 1;
+          background-position: top;
+        }
+      }
+
+      .instructions-component-guide {
+        background-position: top;
+        background-image: url(https://muramasa.com.br/wp-content/uploads/2023/02/my-hero-academia-deku.jpg);
+
+        &:hover {
+          opacity: 1;
+          background-position: center;
+        }
+      }
+    }
   }
 
   ////////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -152,6 +205,13 @@
 
     .header-component {
 
+      background: linear-gradient(120deg, #190947, #a349bf, #5a1bb1, #a349bf, #190947);
+
+      &:hover {
+
+        background: linear-gradient(120deg, #240e67, #ba54d9, #6a21d0, #bd55dc, #250e6b);
+        filter: brightness(1.1);
+      }
 
       .logo-component {
         svg {
@@ -170,7 +230,7 @@
           }
 
           option {
-            background: $lightColor;
+            background: #5a1bb1;
           }
 
           select:hover,
@@ -183,11 +243,13 @@
       .login-component {
 
         .ifLogin a:hover {
-          border-bottom: 2px solid $darkColor;
+          color: $darkOpacityColor;
+          filter: brightness(1.5);
         }
 
         .ifLogout a:hover {
-          border-bottom: 2px solid $darkColor;
+          color: $darkOpacityColor;
+          filter: brightness(1.5);
         }
 
         p a.login-account span:hover {
@@ -195,7 +257,8 @@
         }
 
         .login-button-logout:hover {
-          border-bottom: 2px solid $darkColor;
+          color: $darkOpacityColor;
+          filter: brightness(1.5);
         }
       }
 
@@ -217,7 +280,6 @@
 
       .dropdown .dropdown-menu {
         background: $lightColor;
-        opacity: 0.9;
 
 
         li {
@@ -234,16 +296,39 @@
 
     .main-component {
       .instructions-component {
-        p {
-          a {
-            &:hover {
-              color: $lightColor;
-            }
+
+        .onlyP {
+          background-color: $lightColor;
+          padding: 0.25rem;
+          margin-bottom: 0.25rem;
+          border-radius: 0.25rem;
+
+          a:hover {
+            text-shadow: 2px 3px 4px rgba(255, 255, 255, 0.75),
+              0px -4px 10px rgba(255, 255, 255, 0.3);
+            color: $darkColor;
           }
         }
 
-      }
 
+        .instructions-component-why {
+          .instructions-component-why-div {
+            background: linear-gradient(80deg, rgba(13, 13, 13, 0.85), rgba(145, 113, 71, 0.85));
+          }
+        }
+
+        .instructions-component-what {
+          .instructions-component-what-div {
+            background: linear-gradient(160deg, rgba(100, 29, 15, 0.85), rgba(94, 94, 94, 0.85));
+          }
+        }
+
+        .instructions-component-guide {
+          .instructions-component-guide-div {
+            background: linear-gradient(240deg, rgba(87, 87, 87, 0.85), rgba(84, 95, 26, 0.85));
+          }
+        }
+      }
     }
   }
 
@@ -260,6 +345,13 @@
     }
 
     .header-component {
+      background: linear-gradient(120deg, #a349bf, #a693f0, #e293f0, #a693f0, #a349bf);
+
+      &:hover {
+        background: linear-gradient(120deg, #bc55db, #b09cff, #f09dff, #b09cff, #bf56df);
+        filter: brightness(1.1);
+      }
+
       .logo-component {
         svg {
           g.c {
@@ -277,7 +369,7 @@
           }
 
           option {
-            background: $darkColor;
+            background: #e293f0;
           }
 
           select:hover,
@@ -290,11 +382,13 @@
       .login-component {
 
         .ifLogin a:hover {
-          border-bottom: 2px solid $lightColor;
+          color: $darkColor;
+          filter: brightness(1.5);
         }
 
         .ifLogout a:hover {
-          border-bottom: 2px solid $lightColor;
+          color: $darkColor;
+          filter: brightness(1.5);
         }
 
         p a.login-account span:hover {
@@ -302,7 +396,8 @@
         }
 
         .login-button-logout:hover {
-          border-bottom: 2px solid $lightColor;
+          color: $darkColor;
+          filter: brightness(1.5);
         }
       }
 
@@ -336,19 +431,197 @@
     }
 
     .main-component {
-
-
       .instructions-component {
-        p {
+
+        .onlyP {
+          background-color: $darkColor;
+          padding: 0.25rem;
+          margin-bottom: 0.25rem;
+          border-radius: 0.25rem;
+
+          a:hover {
+            text-shadow: 2px 4px 4px rgba(72, 72, 72, 0.75),
+              0px -4px 10px rgba(255, 255, 255, 0.3);
+            color: $lightColor;
+          }
+        }
+
+        .instructions-component-why {
+
+          h3 {
+            color: $lightColor;
+          }
+
+          p {
+            color: $lightColor;
+          }
+
+          .onlyP a:hover {
+            color: $lightColor;
+          }
+
+          .instructions-component-why-div {
+            background: linear-gradient(80deg, rgba(255, 255, 255, 0.85), rgba(188, 152, 104, 0.85));
+          }
+        }
+
+        .instructions-component-what {
+          .instructions-component-what-div {
+            background: linear-gradient(160deg, rgba(163, 38, 13, 0.85), rgba(154, 154, 154, 0.85));
+          }
+        }
+
+        .instructions-component-guide {
+          .instructions-component-guide-div {
+            background: linear-gradient(240deg, rgba(228, 199, 187, 0.85), rgba(71, 118, 30, 0.85));
+          }
+        }
+      }
+    }
+  }
+
+  // CLEAN MODE
+  &.clean {
+    color: white;
+    background: none;
+
+    a {
+      color: white;
+    }
+
+    .header-component {
+      background: rgb(81, 81, 81);
+      animation: none;
+
+      &:hover {
+        background: rgb(116, 116, 116);
+
+      }
+
+      .logo-component {
+        svg {
+          g.c {
+            stroke: rgb(46, 46, 46);
+          }
+        }
+      }
+
+      .configurations-component {
+        .configurations-item {
+
+          select,
+          option {
+            color: white;
+          }
+
+          option {
+            background: rgb(67, 67, 67);
+          }
+
+          select:hover,
+          option:hover {
+            border-bottom: 2px solid black;
+          }
+        }
+      }
+
+      .login-component {
+
+        .ifLogin {
           a {
+            color: rgb(169, 169, 169);
+
             &:hover {
-              color: $darkColor;
+              color: rgb(37, 37, 37);
+              filter: brightness(1.5);
             }
           }
         }
 
+        .ifLogout {
+          a {
+            color: rgb(169, 169, 169);
+
+            &:hover {
+              color: rgb(37, 37, 37);
+              filter: brightness(1.5);
+            }
+          }
+        }
+
+        p a.login-account span:hover {
+          border-bottom: 2px solid black;
+        }
+
+        .login-button-logout:hover {
+          color: rgb(69, 69, 69);
+          filter: brightness(1.5);
+        }
       }
 
+    }
+
+    .nav-component {
+
+      .dropdown {
+
+        button {
+          color: white;
+        }
+
+        &:hover {
+          border-bottom: 2px solid rgb(67, 67, 67);
+        }
+      }
+
+      .dropdown .dropdown-menu {
+        opacity: 0.9;
+
+        li {
+          color: white;
+          background: rgb(67, 67, 67);
+
+          &:hover {
+            background: rgb(31, 31, 31);
+            filter: brightness(1.25);
+          }
+        }
+      }
+    }
+
+    .main-component {
+      .instructions-component {
+
+        .instructions-component-why,
+        .instructions-component-what,
+        .instructions-component-guide {
+          display: flex;
+          background: rgba(92, 92, 92, 0.5);
+          margin-bottom: 0.25rem;
+          padding: 0.25rem;
+          animation: none;
+        }
+
+        .instructions-component-why-div,
+        .instructions-component-what-div,
+        .instructions-component-guide-div {
+          animation: none;
+        }
+
+        .onlyP {
+          background-color: rgba(84, 84, 84, 0.5);
+          padding: 0.25rem;
+          margin-bottom: 0.25rem;
+          border-radius: 0.25rem;
+
+          a:hover {
+            text-shadow: 2px 4px 4px rgba(0, 0, 0, 0.3),
+              0px -4px 10px rgba(255, 255, 255, 0.3);
+            color: rgba(50, 50, 50);
+          }
+        }
+
+      }
     }
   }
 

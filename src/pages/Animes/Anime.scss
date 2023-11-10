@@ -1,7 +1,7 @@
 @import "../../styles/globalStyles.scss";
 
 .anime-page {
-  min-height: 88vh;
+  min-height: 85.2vh;
   background: none;
   display: flex;
   flex-direction: column;
@@ -30,6 +30,7 @@
     .anime-search-container {
       input {
         background: $lightColor;
+        color: $darkColor;
 
         &::placeholder {
           color: $darkColor;
@@ -42,6 +43,7 @@
     .anime-search-container {
       input {
         background: $darkColor;
+        color: $lightColor;
 
         &::placeholder {
           color: $lightColor;

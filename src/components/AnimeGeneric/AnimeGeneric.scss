@@ -6,47 +6,89 @@
   border-radius: 0.5rem;
   display: flex;
   flex-direction: column;
+  animation: $animation;
 
-  .name-plus-favorite {
+  .data-anime {
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
 
-    h2 {
-      font-size: 1.5rem;
-      cursor: pointer;
-      opacity: 0.75;
-      padding: 0.25rem;
-      border-radius: 0.5rem;
-      background: none;
+    .anime-data {
+      display: inline-flex;
+      gap: 1rem;
       width: 95%;
+      border-radius: 0.5rem;
+
+      .data-banner-anime img {
+        width: 200px;
+        height: 150px;
+        display: flex;
+        border-radius: 0.5rem;
+      }
+
+      .data-container-anime {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: center;
+
+      }
 
       &:hover {
-        opacity: 1;
-        filter: brightness(1.15);
+        background-color: #9135a68f;
       }
     }
 
-    span {
+    .data-container-favorite {
       width: 5%;
-      text-align: center;
+      height: 150px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      justify-content: space-evenly;
+
+
+      span {
+        transition: all 0.25s ease-in-out;
+
+        &:hover {
+          scale: 1.2;
+        }
+      }
+
+      a {
+        transition: all 0.25s ease-in-out;
+
+        &:hover {
+          scale: 1.2;
+        }
+      }
+
     }
+
+  }
+
+  .data-animes {
+    display: flex;
   }
 
   .container-temporada-generic {
+
 
     .container-episodio-generic {
       background: none;
       padding: 0.5rem;
 
+
       h2 {
         font-size: 1.25rem;
         cursor: pointer;
-        margin-bottom: 0.25rem;
         opacity: 0.75;
         padding: 0.25rem;
         border-radius: 0.5rem;
+        margin-bottom: 0.25rem;
 
         &:hover {
           opacity: 1;
@@ -80,29 +122,23 @@
 
     background: $lightColor;
 
-    h2 {
-      &:hover {
-        background: $lightColor;
-      }
-    }
-
     .container-temporada-generic {
       .container-episodio-generic {
         h2 {
-          background: $darkOpacityColor;
+          background: #9135a661;
 
           &:hover {
-            background: $lightColor;
+            background: #9135a68f;
           }
         }
 
         .episodio-generic-p {
 
           a {
-            background: $darkOpacityColor;
+            background: #9135a661;
 
             &:hover {
-              background: $lightColor;
+              background: #9135a68f;
             }
           }
         }
@@ -113,12 +149,6 @@
 
   &.light {
     background: $darkColor;
-
-    h2 {
-      &:hover {
-        background: $darkColor;
-      }
-    }
 
     .container-temporada-generic {
       .container-episodio-generic {

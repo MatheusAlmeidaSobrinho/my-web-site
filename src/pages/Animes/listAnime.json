@@ -5,155 +5,263 @@
           "temporadas": [
             {
               "nome": "Temporada-1",
+              "link": "www",
               "episodios": ["Episodio-1", "Episodio-2", "Episodio-3"]
             },
             {
               "nome": "Temporada-2",
+              "link": "www",
               "episodios": ["Episodio-1", "Episodio-2", "Episodio-3"]
             }
-          ]
+          ],
+                "dados": {
+                  "imagem": "https://i0.wp.com/heroisx.com/wp-content/uploads/2012/02/another_anime.jpg",
+        "dtLanc": "12/11/1996",
+        "score": 5.8,
+        "genders": "Fantasia",
+        "linkWiki": "https://pt.wikipedia.org/wiki/Another"
+      }
         },
         {
           "nome": "Black-Clover",
           "temporadas": [
             {
               "nome": "Temporada-1",
+              "link": "www",
               "episodios": ["Episodio-1", "Episodio-2", "Episodio-3"]
             },
             {
               "nome": "Temporada-2",
+              "link": "www",
               "episodios": ["Episodio-1", "Episodio-2", "Episodio-3"]
             }
-          ]
+          ],
+                "dados": {
+                  "imagem": "https://www.crunchyroll.com/imgsrv/display/thumbnail/1200x675/catalog/crunchyroll/0273e80242d80b0218f640e038269c18.jpe",
+        "dtLanc": "22/06/2000",
+        "score": 6.5,
+        "genders": "Fantasia",
+        "linkWiki": "https://pt.wikipedia.org/wiki/Black_Clover"
+      }
         },
         {
       "nome": "Bleach",
       "temporadas": [
         {
           "nome": "Temporada-1",
+          "link": "www",
           "episodios": ["Episodio-1", "Episodio-2", "Episodio-3"]
         },
         {
           "nome": "Temporada-2",
+          "link": "www",
           "episodios": ["Episodio-1", "Episodio-2", "Episodio-3"]
         }
-      ]
+      ],
+            "dados": {
+              "imagem": "https://s2-techtudo.glbimg.com/OBr9qu_bHXdppZjjQ_yM3Kvczw8=/0x0:1200x630/924x0/smart/filters:strip_icc()/i.s3.glbimg.com/v1/AUTH_08fbf48bc0524877943fe86e43087e7a/internal_photos/bs/2023/T/x/3cBYkkRpipAoMFoQAHLQ/bleach1.jpg",
+        "dtLanc": "04/03/1996",
+        "score": 7.7,
+        "genders": "Fantasia",
+        "linkWiki": "https://pt.wikipedia.org/wiki/Bleach_(mang%C3%A1)"
+      }
     },
     {
       "nome": "Boku-No-Hero-Academia",
       "temporadas": [
         {
           "nome": "Temporada-1",
-          "episodios": ["Boku no Hero Academia - Temporada 1 - Episodio 1", "Episodio-2", "Episodio-3"]
+          "link": "www",
+          "episodios": ["Episodio-1", "Episodio-2", "Episodio-3"]
         },
         {
           "nome": "Temporada-2",
+          "link": "www",
           "episodios": ["Episodio-1", "Episodio-2", "Episodio-3"]
         }
-      ]
+      ],
+            "dados": {
+              "imagem": "https://culturandomart.files.wordpress.com/2021/05/my-hero-academia.png?w=1200",
+        "dtLanc": "04/03/2018",
+        "score": 10,
+        "genders": "Fantasia",
+        "linkWiki": "https://pt.wikipedia.org/wiki/Boku_no_Hero_Academia"
+      }
     },{
       "nome": "Boruto",
       "temporadas": [
         {
           "nome": "Temporada-1",
+          "link": "www",
           "episodios": ["Boku no Hero Academia - Temporada 1 - Episodio 1", "Episodio-2", "Episodio-3"]
         },
         {
           "nome": "Temporada-2",
+          "link": "www",
           "episodios": ["Episodio-1", "Episodio-2", "Episodio-3"]
         }
-      ]
+      ],
+            "dados": {
+              "imagem": "https://upload.wikimedia.org/wikipedia/pt/d/db/Boruto_manga_vol_1.jpg",
+        "dtLanc": "04/03/1996",
+        "score": 8.9,
+        "genders": "Fantasia",
+        "linkWiki": "https://pt.wikipedia.org/wiki/Boruto:_Naruto_Next_Generations"
+      }
     },
     {
       "nome": "Dragon-Ball-Super",
       "temporadas": [
         {
           "nome": "Temporada-1",
+          "link": "www",
           "episodios": ["Episodio-1", "Episodio-2", "Episodio-3"]
         },
         {
           "nome": "Temporada-2",
+          "link": "www",
           "episodios": ["Episodio-1", "Episodio-2", "Episodio-3"]
         }
-      ]
+      ],
+            "dados": {
+              "imagem": "https://www.crunchyroll.com/imgsrv/display/thumbnail/1200x675/catalog/crunchyroll/26079ab060401d8a76039e985d63a3e9.jpe",
+        "dtLanc": "04/03/1996",
+        "score": 8.5,
+        "genders": "Fantasia",
+        "linkWiki": "https://pt.wikipedia.org/wiki/Dragon_Ball_Super"
+      }
     },
     {
       "nome": "Hunter-x-Hunter",
       "temporadas": [
         {
           "nome": "Temporada-1",
+          "link": "www",
           "episodios": ["Episodio-1", "Episodio-2", "Episodio-3"]
         },
         {
           "nome": "Temporada-2",
+          "link": "www",
           "episodios": ["Episodio-1", "Episodio-2", "Episodio-3"]
         }
-      ]
+      ],
+            "dados": {
+              "imagem": "https://www.crunchyroll.com/imgsrv/display/thumbnail/1200x675/catalog/crunchyroll/2e54344c7cc1675af721b4021222230f.jpe",
+        "dtLanc": "04/03/1996",
+        "score": 9.2,
+        "genders": "Fantasia",
+        "linkWiki": "https://pt.wikipedia.org/wiki/Hunter_%C3%97_Hunter"
+      }
     },
     {
       "nome": "Jujutsu-Kaisen",
       "temporadas": [
         {
           "nome": "Temporada-1",
+          "link": "www",
           "episodios": ["Episodio-1", "Episodio-2", "Episodio-3"]
         },
         {
           "nome": "Temporada-2",
+          "link": "www",
           "episodios": ["Episodio-1", "Episodio-2", "Episodio-3"]
         }
-      ]
+      ],
+            "dados": {
+              "imagem": "https://i.ytimg.com/vi/n6b_RuTJNWA/maxresdefault.jpg",
+        "dtLanc": "04/03/1996",
+        "score": 9.9,
+        "genders": "Fantasia",
+        "linkWiki": "https://pt.wikipedia.org/wiki/Jujutsu_Kaisen"
+      }
     },
     {
       "nome": "Mushoku-Tensei",
       "temporadas": [
         {
           "nome": "Temporada-1",
+          "link": "www",
           "episodios": ["Episodio-1", "Episodio-2", "Episodio-3"]
         },
         {
           "nome": "Temporada-2",
+          "link": "www",
           "episodios": ["Episodio-1", "Episodio-2", "Episodio-3"]
         }
-      ]
+      ],
+            "dados": {
+              "imagem": "https://i0.wp.com/metagalaxia.com.br/wp-content/uploads/2023/06/Mushoku-Tensei-Jobless-Reincarnation-2.webp?fit=1200%2C675&ssl=1",
+        "dtLanc": "04/03/1996",
+        "score": 9.5,
+        "genders": "Fantasia",
+        "linkWiki": "https://pt.wikipedia.org/wiki/Mushoku_Tensei"
+      }
     },
     {
       "nome": "Naruto-Shippuden",
       "temporadas": [
         {
           "nome": "Temporada-1",
+          "link": "www",
           "episodios": ["Episodio-1", "Episodio-2", "Episodio-3"]
         },
         {
           "nome": "Temporada-2",
+          "link": "www",
           "episodios": ["Episodio-1", "Episodio-2", "Episodio-3"]
         }
-      ]
+      ],
+            "dados": {
+              "imagem": "https://www.crunchyroll.com/imgsrv/display/thumbnail/640x360/catalog/crunchyroll/3f283002b47c62b1e5d311c45f95c97e.jpe",
+        "dtLanc": "04/03/1996",
+        "score": 9.1,
+        "genders": "Fantasia",
+        "linkWiki": "https://pt.wikipedia.org/wiki/Naruto"
+      }
     },
     {
       "nome": "One Piece",
       "temporadas": [
         {
           "nome": "Temporada-1",
+          "link": "www",
           "episodios": ["Episodio-1", "Episodio-2", "Episodio-3"]
         },
         {
           "nome": "Temporada-2",
+          "link": "www",
           "episodios": ["Episodio-1", "Episodio-2", "Episodio-3"]
         }
-      ]
+      ],
+            "dados": {
+              "imagem": "https://www.crunchyroll.com/imgsrv/display/thumbnail/1200x675/catalog/crunchyroll/1ecde018e863e2aaee31f00a23378c35.jpe",
+        "dtLanc": "04/03/1996",
+        "score": 8.3,
+        "genders": "Fantasia",
+        "linkWiki": "https://pt.wikipedia.org/wiki/One_Piece"
+      }
     },
     {
       "nome": "Shingeki-No-Kyojin",
       "temporadas": [
         {
           "nome": "Temporada-1",
+          "link": "www",
           "episodios": ["Episodio-1", "Episodio-2", "Episodio-3"]
         },
         {
           "nome": "Temporada-2",
+          "link": "www",
           "episodios": ["Episodio-1", "Episodio-2", "Episodio-3"]
         }
-      ]
+      ],
+            "dados": {
+              "imagem": "https://1.bp.blogspot.com/-N5nDSJ5DRPo/X7M6N9MUa5I/AAAAAAAARzs/yLTIyzuMzSMLOeZhUeaOchIKw7xS5FzNwCLcBGAsYHQ/s1200/Image09.jpg",
+        "dtLanc": "04/03/1996",
+        "score": 9.4,
+        "genders": "Fantasia",
+        "linkWiki": "https://pt.wikipedia.org/wiki/Shingeki_no_Kyojin"
+      }
     }
   ]
 }

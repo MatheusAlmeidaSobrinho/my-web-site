@@ -42,12 +42,18 @@ export default function Home() {
 
   return (
     <div className={`page-home ${theme} ${acessibility} ${currentLanguage}`}>
-      <GptApi />
-      <Clock />
-      <Weather />
-      <CoinCounter />
-      <Player />
-      <Footer />
+      {theme === 'clean' ? (
+        <></>
+      ) : (
+        <>
+          <GptApi />
+          <Clock />
+          <Weather />
+          <CoinCounter />
+          <Player />
+          <Footer />
+        </>
+      )}
       <div className="header-component">
         <div className={`logo-component svg-${theme}`}>
           <Link to="/">
@@ -90,10 +96,13 @@ export default function Home() {
               onClick={toggleDropdown}
             >
               <button className="dropdown-toggle">
-                {currentPage === '/' && 'Home'}
-                {currentPage === '/login' && 'Logging...'}
-                {currentPage === '/register' && 'Registering...'}
-                {currentPage === '/info' && 'Sobre'}
+                {currentPage === '/' && contents.home.pageHome[currentLanguage]}
+                {currentPage === '/login' &&
+                  contents.home.pageLogin[currentLanguage]}
+                {currentPage === '/register' &&
+                  contents.home.pageRegister[currentLanguage]}
+                {currentPage === '/info' &&
+                  contents.home.pageInfo[currentLanguage]}
                 {currentPage === '/projects' &&
                   contents.home.pageProjects[currentLanguage]}
                 {currentPage === '/projects/projectOne' &&
@@ -107,7 +116,7 @@ export default function Home() {
                     to="/"
                     className={location.pathname === '/' ? 'active' : ''}
                   >
-                    <li>Home</li>
+                    <li>{contents.home.pageHome[currentLanguage]}</li>
                   </Link>
                   <Link
                     to="/projects"
@@ -135,10 +144,12 @@ export default function Home() {
               onClick={toggleDropdown}
             >
               <button className="dropdown-toggle">
-                {currentPage === '/' && 'Home'}
+                {currentPage === '/' && contents.home.pageHome[currentLanguage]}
                 {currentPage === '/animes' && 'Animes'}
-                {currentPage === '/accountuser' && 'My Space'}
-                {currentPage === '/accountadmin' && 'Adm Space'}
+                {currentPage === '/accountuser' &&
+                  contents.home.pageUser[currentLanguage]}
+                {currentPage === '/accountadmin' &&
+                  contents.home.pageAdmin[currentLanguage]}
                 {currentPage === '/blog' && 'Blog'}
                 {currentPage === '/games' &&
                   contents.home.tGamesGuideHome[currentLanguage]}
@@ -162,7 +173,7 @@ export default function Home() {
                     to="/"
                     className={location.pathname === '/' ? 'active' : ''}
                   >
-                    <li>Home</li>
+                    <li>{contents.home.pageHome[currentLanguage]}</li>
                   </Link>
 
                   <Link
@@ -187,10 +198,10 @@ export default function Home() {
                   </Link>
 
                   <Link
-                    to="/toolsIa"
-                    className={location.pathname === '/toolsIa' ? 'active' : ''}
+                    to="/store"
+                    className={location.pathname === '/store' ? 'active' : ''}
                   >
-                    <li>{contents.home.pageTools[currentLanguage]}</li>
+                    <li>{contents.home.pageStore[currentLanguage]}</li>
                   </Link>
 
                   <Link
@@ -210,18 +221,19 @@ export default function Home() {
                   >
                     <li>{contents.home.pageProjects[currentLanguage]}</li>
                   </Link>
+
+                  <Link
+                    to="/toolsIa"
+                    className={location.pathname === '/toolsIa' ? 'active' : ''}
+                  >
+                    <li>{contents.home.pageTools[currentLanguage]}</li>
+                  </Link>
+
                   <Link
                     to="/info"
                     className={location.pathname === '/info' ? 'active' : ''}
                   >
                     <li>{contents.home.pageInfo[currentLanguage]}</li>
-                  </Link>
-
-                  <Link
-                    to="/store"
-                    className={location.pathname === '/store' ? 'active' : ''}
-                  >
-                    <li>{contents.home.pageStore[currentLanguage]}</li>
                   </Link>
                 </ul>
               )}
@@ -235,8 +247,15 @@ export default function Home() {
               onChange={event => changeTheme(event.target.value)}
               value={theme}
             >
-              <option value="dark">Dark</option>
-              <option value="light">Light</option>
+              <option value="dark">
+                {contents.home.configThemeDark[currentLanguage]}
+              </option>
+              <option value="light">
+                {contents.home.configThemeLight[currentLanguage]}
+              </option>
+              <option value="clean">
+                {contents.home.configThemeClean[currentLanguage]}
+              </option>
             </select>
           </div>
           <div className="configurations-item">
@@ -246,9 +265,15 @@ export default function Home() {
               value={acessibility}
             >
               <option value="normal">Normal</option>
-              <option value="lower">LowerCase</option>
-              <option value="upper">UpperCase</option>
-              <option value="zoom">Zoom</option>
+              <option value="lower">
+                {contents.home.configLower[currentLanguage]}
+              </option>
+              <option value="upper">
+                {contents.home.configUpper[currentLanguage]}
+              </option>
+              <option value="zoom">
+                {contents.home.configZoom[currentLanguage]}
+              </option>
             </select>
           </div>
           <div className="configurations-item">
@@ -257,8 +282,12 @@ export default function Home() {
               onChange={event => changeCurrentLanguage(event.target.value)}
               value={currentLanguage}
             >
-              <option value="portuguese">Portugues</option>
-              <option value="english">English</option>
+              <option value="portuguese">
+                {contents.home.configLanguagePT[currentLanguage]}
+              </option>
+              <option value="english">
+                {contents.home.configLanguageEN[currentLanguage]}
+              </option>
             </select>
           </div>
         </div>
@@ -280,17 +309,17 @@ export default function Home() {
                   )}
                 </p>
                 <Link className="login-button-logout" onClick={logout}>
-                  <BiExit size={28} />
+                  <BiExit size={32} />
                 </Link>
               </div>
             </div>
           ) : (
             <div className="ifLogin">
               <Link to="/login">
-                <BiLogIn size={28} />
+                <BiLogIn size={32} />
               </Link>
               <Link to="/register">
-                <BiRegistered size={28} />
+                <BiRegistered size={32} />
               </Link>
             </div>
           )}
@@ -299,47 +328,69 @@ export default function Home() {
       <div className="main-component">
         {algumaCondicao ? (
           <div className="instructions-component">
-            <h3>{contents.home.WhyHome[currentLanguage]}</h3>
-            <p>{contents.home.pWhyHome[currentLanguage]}</p>
-            <h3>{contents.home.whatHome[currentLanguage]}</h3>
-            <p>{contents.home.pWhatHome[currentLanguage]}</p>
-            <h3>{contents.home.guideHome[currentLanguage]}</h3>
-            <p>{contents.home.pGuideHome[currentLanguage]}</p>
-            <p>
+            <div className="instructions-component-why">
+              <div className="instructions-component-why-div">
+                <h3>{contents.home.WhyHome[currentLanguage]}</h3>
+                <p>{contents.home.pWhyHome[currentLanguage]}</p>
+              </div>
+              <div>
+                <span></span>
+              </div>
+            </div>
+            <div className="instructions-component-what">
+              <div className="instructions-component-what-div">
+                <h3>{contents.home.whatHome[currentLanguage]}</h3>
+                <p>{contents.home.pWhatHome[currentLanguage]}</p>
+              </div>
+              <div>
+                <span></span>
+              </div>
+            </div>
+            <div className="instructions-component-guide">
+              <div className="instructions-component-guide-div">
+                <h3>{contents.home.guideHome[currentLanguage]}</h3>
+                <p>{contents.home.pGuideHome[currentLanguage]}</p>
+              </div>
+              <div>
+                <span></span>
+              </div>
+            </div>
+
+            <p className="onlyP">
               <Link to="/animes">Animes</Link>
               {contents.home.pAnimeGuideHome[currentLanguage]}
             </p>
-            <p>
+            <p className="onlyP">
               <Link to="/blog">Blog</Link>
               {contents.home.pBlogGuideHome[currentLanguage]}
             </p>
-            <p>
+            <p className="onlyP">
               <Link to="/games">
                 {contents.home.tGamesGuideHome[currentLanguage]}
               </Link>
               {contents.home.pGamesGuideHome[currentLanguage]}
             </p>
-            <p>
+            <p className="onlyP">
               <Link to="/toolsIa">
                 {contents.home.tSiteIaGuideHome[currentLanguage]}
               </Link>
               {contents.home.pSiteIaGuideHome[currentLanguage]}
             </p>
-            <p>
+            <p className="onlyP">
               <Link to="/potatoApi">Potato API</Link>
               {contents.home.pPotatoApiGuideHome[currentLanguage]}
             </p>
-            <p>
+            <p className="onlyP">
               <Link to="/projects">
                 {contents.home.tProjectsGuideHome[currentLanguage]}
               </Link>
               {contents.home.pProjectsGuideHome[currentLanguage]}
             </p>
-            <p>
+            <p className="onlyP">
               <Link to="/info">{contents.home.pageInfo[currentLanguage]}</Link>
               {contents.home.pAboutGuideHome[currentLanguage]}
             </p>
-            <p>
+            <p className="onlyP">
               <Link to="/store">
                 {contents.home.pageStore[currentLanguage]}
               </Link>

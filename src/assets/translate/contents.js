@@ -4,6 +4,38 @@ export const contents = {
       english: 'Hello',
       portuguese: 'Olá'
     },
+    configThemeDark: {
+      english: 'Dark',
+      portuguese: 'Escuro'
+    },
+    configThemeLight: {
+      english: 'Light',
+      portuguese: 'Claro'
+    },
+    configThemeClean: {
+      english: 'Clean',
+      portuguese: 'Limpo'
+    },
+    configLower: {
+      english: 'LowerCase',
+      portuguese: 'Minúsculas'
+    },
+    configUpper: {
+      english: 'UpperCase',
+      portuguese: 'Maiúsculas'
+    },
+    configZoom: {
+      english: 'Zoom',
+      portuguese: 'Aumentar'
+    },
+    configLanguagePT: {
+      english: 'Portuguese',
+      portuguese: 'Português'
+    },
+    configLanguageEN: {
+      english: 'English',
+      portuguese: 'Inglês'
+    },
     WhyHome: {
       english: 'Why did I create this site?',
       portuguese: 'Por que criei esse site?'
@@ -35,10 +67,8 @@ export const contents = {
         'O site consiste em paginas com diversas utilidades, noticias e guias para devs no geral, porem com mais conteudo para front-end (até o momento ^^, aguardem ;D) você pode ter acesso a todas se realizar o cadastro e login.'
     },
     pAnimeGuideHome: {
-      english:
-        ' - Page with direct links to watch anime / download (offline prototype)',
-      portuguese:
-        ' - Pagina com links diretos para assistir animes / download (offline prototype)'
+      english: ' - Page with direct links to watch anime / download.',
+      portuguese: ' - Pagina com links diretos para assistir animes / download.'
     },
     pBlogGuideHome: {
       english:
@@ -109,6 +139,26 @@ export const contents = {
     pageInfo: {
       english: 'About',
       portuguese: 'Sobre Mim'
+    },
+    pageHome: {
+      english: 'Home',
+      portuguese: 'Inicio'
+    },
+    pageUser: {
+      english: 'My Datas',
+      portuguese: 'Meus Dados'
+    },
+    pageAdmin: {
+      english: 'My Espace',
+      portuguese: 'Meu Espaço'
+    },
+    pageRegister: {
+      english: 'Registering...',
+      portuguese: 'Registrando...'
+    },
+    pageLogin: {
+      english: 'Logging...',
+      portuguese: 'Entrando...'
     },
     pageStore: {
       english: 'Store',

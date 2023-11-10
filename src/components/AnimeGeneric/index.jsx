@@ -5,8 +5,10 @@ import { Link } from 'react-router-dom'
 import { useTheme } from '../../hooks/useTheme'
 import { useFavorite } from '../../hooks/useFavorite'
 import { MdFavorite, MdOutlineFavoriteBorder } from 'react-icons/md'
+import { BsWikipedia } from 'react-icons/bs'
+import StarsRating from '../StarsRating/StarsRating'
 
-function AnimeGeneric({ nome, temporadas }) {
+function AnimeGeneric({ nome, temporadas, dados }) {
   const { theme } = useTheme()
   const [isAnimeOpen, setIsAnimeOpen] = useState(false)
   const [temporadasAbertas, setTemporadasAbertas] = useState(
@@ -32,11 +34,32 @@ function AnimeGeneric({ nome, temporadas }) {
 
   return (
     <div className={`container-anime-generic ${theme}`}>
-      <div className="name-plus-favorite">
-        <h2 onClick={toggleAnime}>{nome}</h2>
-        <span onClick={handleToggleFavorite}>
-          {isFavorite ? <MdFavorite /> : <MdOutlineFavoriteBorder />}
-        </span>
+      <div className="data-anime">
+        <div onClick={toggleAnime} className="anime-data">
+          <div className="data-banner-anime">
+            <img src={dados.imagem} alt="" />
+          </div>
+          <div className="data-container-anime">
+            <h2>{nome}</h2>
+            <p>{dados.dtLanc}</p>
+            <div className="star-container">
+              <StarsRating score={dados.score} />
+            </div>
+            <p>{dados.genders}</p>
+          </div>
+        </div>
+        <div className="data-container-favorite">
+          <span onClick={handleToggleFavorite}>
+            {isFavorite ? (
+              <MdFavorite size={24} />
+            ) : (
+              <MdOutlineFavoriteBorder size={24} />
+            )}
+          </span>
+          <Link to={dados.linkWiki} target="_blank">
+            <BsWikipedia size={24} />
+          </Link>
+        </div>
       </div>
       {isAnimeOpen && (
         <div className="container-temporada-generic">
@@ -46,10 +69,7 @@ function AnimeGeneric({ nome, temporadas }) {
               {temporadasAbertas[index] && (
                 <div className="episodio-generic-p">
                   {temporada.episodios.map((episodio, idx) => (
-                    <Link
-                      key={idx}
-                      to={`${nome}-${temporada.nome}-${episodio}`}
-                    >
+                    <Link key={idx} to={temporada.link}>
                       {episodio}
                     </Link>
                   ))}
@@ -70,7 +90,14 @@ AnimeGeneric.propTypes = {
       nome: PropTypes.string.isRequired,
       episodios: PropTypes.arrayOf(PropTypes.string.isRequired).isRequired
     })
-  ).isRequired
+  ).isRequired,
+  dados: PropTypes.shape({
+    imagem: PropTypes.string.isRequired,
+    dtLanc: PropTypes.string.isRequired,
+    score: PropTypes.number.isRequired,
+    genders: PropTypes.string.isRequired,
+    linkWiki: PropTypes.string.isRequired
+  }).isRequired
 }
 
 export default AnimeGeneric

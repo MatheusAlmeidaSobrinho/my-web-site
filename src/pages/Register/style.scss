@@ -6,9 +6,10 @@
   justify-content: center;
   align-items: center;
   gap: 1rem;
+  min-height: 85.2vh;
 
   .register-title {
-    text-decoration: underline;
+    font-size: 3rem;
   }
 
   .register-form {
@@ -35,40 +36,39 @@
 
   &.dark {
 
-    // background-color: red;
-
-    .register-title {
-      text-decoration: underline;
-    }
-
     .register-form {
 
       .register-input {
         border-radius: 0.15rem;
         color: $darkColor;
-        background-color: rgb(100, 100, 100);
+        background-color: $darkOpacityColor;
       }
 
       input::placeholder {
-        color: rgb(255, 138, 95);
+        color: $darkColor;
       }
 
       .register-button {
         color: $darkColor;
-        background: rgba(255, 255, 255, 0.9);
+        background: $darkOpacityColor;
 
         &:hover {
-          color: white;
-          background: $darkColor;
+          color: $darkColor;
+          background: $lightColor;
         }
       }
     }
 
     .register-goToLogin {
-      color: rgb(255, 138, 95);
+      color: $darkOpacityColor;
 
-      a:hover {
-        text-decoration: underline;
+      a {
+        color: $darkColor;
+        filter: brightness(2.5);
+
+        &:hover {
+          text-decoration: underline;
+        }
       }
 
     }
@@ -77,41 +77,41 @@
 
   &.light {
 
-    // background-color: red;
-
-    .register-title {
-      text-decoration: underline;
-    }
-
     .register-form {
 
       .register-input {
         border-radius: 0.15rem;
         color: $lightColor;
-        background-color: rgb(216, 216, 216);
+        background-color: $lightOpacityColor;
       }
 
       input::placeholder {
-        color: rgb(195, 58, 195);
+        color: $lightColor;
       }
 
       .register-button {
         color: $lightColor;
-        background: rgba(255, 255, 255, 0.9);
+        background: $lightOpacityColor;
 
         &:hover {
-          color: white;
+          color: $darkColor;
           background: $lightColor;
         }
       }
     }
 
     .register-goToLogin {
-      color: rgb(195, 58, 195);
+      color: $lightColor;
 
-      a:hover {
-        text-decoration: underline;
+      a {
+        color: $lightColor;
+        filter: brightness(2.5);
+
+        &:hover {
+          text-decoration: underline;
+        }
       }
+
     }
   }
 }

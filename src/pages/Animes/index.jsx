@@ -42,6 +42,7 @@ export default function Animes() {
           key={index}
           nome={anime.nome}
           temporadas={anime.temporadas}
+          dados={anime.dados}
           itemType="Anime"
         />
       ))}
