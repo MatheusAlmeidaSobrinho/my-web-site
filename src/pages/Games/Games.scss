@@ -2,4 +2,36 @@
 
 .games-page {
   min-height: 85.2vh;
+
+  .slick-prev,
+  .slick-next {
+    width: 30px;
+  }
+
+  .slick-prev:before,
+  .slick-next:before {
+    opacity: .85;
+    color: rgb(239, 239, 239);
+  }
+
+  .galaxy-button {
+    position: relative;
+    padding: 0.5rem 1rem;
+    font-size: 16px;
+    background: url('https://img.freepik.com/fotos-gratis/papel-de-parede-abstrato-ultra-detalhado-da-nebulosa-4_1562-749.jpg?size=626&ext=jpg&ga=GA1.1.1826414947.1699401600&semt=ais');
+    color: #fff;
+    cursor: pointer;
+    overflow: hidden;
+    transition: all 0.3s ease-in-out;
+    opacity: 0.75;
+    border: 1px solid grayscale($color: #dcdcdc);
+    border-radius: 0.5rem;
+  }
+
+  .galaxy-button:hover {
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 9px 18px -5px;
+    opacity: 1;
+    filter: brightness(1.3);
+  }
+
 }

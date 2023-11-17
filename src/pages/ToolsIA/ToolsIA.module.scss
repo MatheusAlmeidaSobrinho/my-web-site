@@ -27,6 +27,8 @@
     display: flex;
     flex-direction: column;
     font-size: 0.75rem;
+    border: 1px solid gray;
+    padding-bottom: 0.25rem;
 
     &:hover {
       box-shadow: rgba(0, 0, 0, 0.25) 0px 12px 25px -6px;

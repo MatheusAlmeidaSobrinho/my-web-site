@@ -50,39 +50,39 @@ function Games() {
     {
       id: 1,
       images: [
-        'https://picsum.photos/id/200/550/200',
-        'https://picsum.photos/id/201/550/200',
-        'https://picsum.photos/id/202/550/200',
-        'https://picsum.photos/id/203/550/200',
-        'https://picsum.photos/id/204/550/200'
+        'https://cdna.artstation.com/p/assets/images/images/048/158/946/large/litos-lopez-blasphemous-wallpaperdf5cxv.jpg?1649340052',
+        'https://hdwallsource.com/img/2019/5/blasphemous-video-game-wallpaper-68582-70920-hd-wallpapers.jpg',
+        'https://images8.alphacoders.com/113/thumb-1920-1131309.jpg',
+        'https://images.alphacoders.com/131/1311723.jpeg',
+        'https://wallpapercave.com/wp/wp4773068.jpg'
       ],
       title: 'Blasphemous',
       description:
-        'Uma horrível maldição, conhecida apenas como O Milagre, caiu sobre a terra de Cvstodia e a sua população...'
+        'Uma horrível maldição, conhecida apenas como O Milagre, difundiu-se amplamente por toda a região  de Cvstodia e a sua população foi amaldiçoada...'
     },
     {
       id: 2,
       images: [
-        'https://picsum.photos/id/225/550/200',
-        'https://picsum.photos/id/216/550/200',
-        'https://picsum.photos/id/227/550/200',
-        'https://picsum.photos/id/228/550/200',
-        'https://picsum.photos/id/229/550/200'
+        'https://usercontent.one/wp/www.onono.no/wp-content/uploads/2021/03/Thymesia_09.png?media=1676933147',
+        'https://www.pcgamesn.com/wp-content/sites/pcgamesn/2022/08/thymesia-patch.jpg',
+        'https://whatifgaming.com/wp-content/uploads/2022/08/thymesia-varg-featured.jpg',
+        'https://i0.wp.com/infinitestart.com/wp-content/uploads/2022/08/Thymesia_20220809001829-scaled.jpg',
+        'https://www.gamespot.com/a/uploads/screen_kubrick/679/6794662/4012278-thymesia.jpeg'
       ],
       title: 'Thymesia',
       description:
-        'reino de Hermes, outrora próspero, tombou vítima de uma grande calamidade.A alquimia, aclamada como a resposta para todos os problemas, difundiu-se amplamente por toda a região. ...'
+        'Reino de Hermes, outrora próspero, tombou vítima de uma grande calamidade. A alquimia, aclamada como a resposta para todos os problemas...'
     },
     {
       id: 3,
       images: [
-        'https://picsum.photos/id/210/550/200',
-        'https://picsum.photos/id/211/550/200',
-        'https://picsum.photos/id/212/550/200',
-        'https://picsum.photos/id/213/550/200',
-        'https://picsum.photos/id/214/550/200'
+        'https://images3.alphacoders.com/600/600925.jpg',
+        'https://wallpaperset.com/w/full/c/f/7/209479.jpg',
+        'https://wallpaperset.com/w/full/3/9/5/209531.jpg',
+        'https://wallpaperset.com/w/full/d/5/b/209547.jpg',
+        'https://wallpaperset.com/w/full/a/1/2/209543.jpg'
       ],
-      title: 'Dark Souls 3',
+      title: 'Dark Souls III',
       description:
         'Com o fogo se apagando e o mundo caindo em ruínas, você precisa se aventurar em um universo repleto de inimigos e ambientes colossais...'
     }
@@ -139,35 +139,37 @@ function Games() {
     {
       id: 1,
       name: 'Dark souls 2',
-      image: 'https://picsum.photos/200',
+      image: 'https://farm6.staticflickr.com/5512/9674184368_51841e9b56.jpg',
       descont: '34,90',
       price: '19.90'
     },
     {
       id: 2,
-      name: 'Doom',
-      image: 'https://picsum.photos/200',
+      name: 'GTA 5',
+      image:
+        'https://wallpapers.com/images/featured/grand-theft-auto-v-naej4yiap4gnxh2o.jpg',
       descont: '49,49',
       price: '29.90'
     },
     {
       id: 3,
       name: 'South Park',
-      image: 'https://picsum.photos/200',
+      image:
+        'https://wallpapercosmos.com/w/full/c/8/9/43955-3840x2160-desktop-4k-south-park-background-image.jpg',
       descont: '57,90',
       price: '39.90'
     },
     {
       id: 4,
       name: 'BloodBorne',
-      image: 'https://picsum.photos/200',
+      image: 'https://images3.alphacoders.com/103/1031859.jpg',
       descont: '89,90',
       price: '49.90'
     },
     {
       id: 5,
-      name: 'Shadow War',
-      image: 'https://picsum.photos/200',
+      name: 'Shadow of War',
+      image: 'https://images8.alphacoders.com/806/thumbbig-806265.webp',
       descont: '99,99',
       price: '59.90'
     }
@@ -175,37 +177,75 @@ function Games() {
 
   return (
     <div className="games-page" style={{ padding: '1rem' }}>
-      <h2>DESTAQUES</h2>
+      <h2 style={{ marginBottom: '1rem' }}>DESTAQUES</h2>
       <div
         style={{
           display: 'grid',
           gridTemplateColumns: '50% 50%',
           gap: '1rem',
-          padding: '1rem'
+          padding: '1.5rem',
+          border: '2px solid gray',
+          borderRadius: '0.5rem',
+          alignItems: 'center'
         }}
       >
         <div>
           <Slider {...imageCarouselSettings}>
             {products[currentProduct].images.map((image, index) => (
               <div key={index}>
-                <img src={image} alt={`Imagem ${index + 1}`} />
+                <img
+                  src={image}
+                  alt={`Imagem ${index + 1}`}
+                  style={{
+                    width: '500px',
+                    height: '250px',
+                    borderRadius: '0.5rem',
+                    border: '2px solid gray',
+                    padding: '0.05rem'
+                  }}
+                />
               </div>
             ))}
           </Slider>
         </div>
-        <div style={{ padding: '20px' }}>
+        <div
+          style={{
+            padding: '0 1rem',
+            display: 'flex',
+            flexDirection: 'column',
+            justifyContent: 'space-around',
+            gap: '1rem'
+          }}
+        >
           <h2>{products[currentProduct].title}</h2>
           <p>{products[currentProduct].description}</p>
+          <p>Price: R$ XX,XX</p>
+          <button className="galaxy-button">
+            <span className="button-text">Comprar</span>
+            <div className="galaxy-effect"></div>
+          </button>
         </div>
       </div>
+
       <div
         style={{
-          marginTop: '20px',
+          marginTop: '0.5rem',
           display: 'flex',
           justifyContent: 'space-between'
         }}
       >
-        <button onClick={prevProduct}>Anterior</button>
+        <button
+          onClick={prevProduct}
+          style={{
+            borderRadius: '0.25rem',
+            padding: '0.25rem',
+            background: 'none',
+            color: 'white',
+            fontSize: '1rem'
+          }}
+        >
+          Anterior
+        </button>
         <MultiCarousel {...productCarouselSettings}>
           {products.map(product => (
             <div key={product.id}>
@@ -213,7 +253,18 @@ function Games() {
             </div>
           ))}
         </MultiCarousel>
-        <button onClick={nextProduct}>Próximo</button>
+        <button
+          onClick={nextProduct}
+          style={{
+            borderRadius: '0.25rem',
+            padding: '0.25rem',
+            background: 'none',
+            color: 'white',
+            fontSize: '1rem'
+          }}
+        >
+          Próximo
+        </button>
       </div>
 
       <div
@@ -236,8 +287,7 @@ function Games() {
               style={{
                 display: 'flex',
                 flexDirection: 'column',
-                textAlign: 'center',
-                width: '17.5%'
+                textAlign: 'center'
               }}
             >
               <Link to={'../games/categoria/id'} target="_blank">
@@ -245,7 +295,12 @@ function Games() {
                   src={category.image}
                   alt={category.descont}
                   style={{
-                    opacity: '0.75'
+                    minWidth: '175px',
+                    minHeight: '175px',
+                    width: '175px',
+                    height: '175px',
+                    borderRadius: '0.25rem',
+                    border: '1px solid gray'
                   }}
                 />
                 {category.name}
