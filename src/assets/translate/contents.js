@@ -260,6 +260,12 @@ export const contents = {
       portuguese: 'Proxima musica'
     }
   },
+  clock: {
+    hour: {
+      english: 'Hour: ',
+      portuguese: 'Hora:'
+    }
+  },
   coinCounter: {
     rankBronze: {
       english: 'Captain Potato',

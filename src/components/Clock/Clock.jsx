@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react'
 import './Clock.css'
 import { useLanguage } from '../../hooks/useLanguage'
+import { contents } from '../../assets/translate/contents'
 
 export default function Clock() {
   const [date, setDate] = useState(new Date())
@@ -31,7 +32,9 @@ export default function Clock() {
       <p>
         {weekday}, {formattedDate}
       </p>
-      <p>Hora: {formattedTime}</p>
+      <p>
+        {contents.clock.hour[currentLanguage]} {formattedTime}
+      </p>
     </div>
   )
 }
